@@ -1,0 +1,477 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Resources/keyboard_button/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/project_scene/Teclado/Teclado.gd" type="Script" id=2]
+[ext_resource path="res://Resources/keyboard_button/arrow_up.png" type="Texture" id=3]
+[ext_resource path="res://Resources/keyboard_button/arrow_down.png" type="Texture" id=4]
+[ext_resource path="res://Resources/keyboard_button/arrow_left.png" type="Texture" id=5]
+[ext_resource path="res://Resources/keyboard_button/arrow_right.png" type="Texture" id=6]
+[ext_resource path="res://Resources/keyboard_button/select.png" type="Texture" id=7]
+[ext_resource path="res://Resources/keyboard_button/paste.png" type="Texture" id=8]
+[ext_resource path="res://Resources/keyboard_button/copy.png" type="Texture" id=9]
+[ext_resource path="res://Resources/keyboard_button/cut.png" type="Texture" id=10]
+[ext_resource path="res://Resources/keyboard_button/backspace1.png" type="Texture" id=11]
+[ext_resource path="res://Resources/keyboard_button/backspace2.png" type="Texture" id=12]
+[ext_resource path="res://Resources/keyboard_button/enter1.png" type="Texture" id=13]
+[ext_resource path="res://Resources/keyboard_button/enter2.png" type="Texture" id=14]
+[ext_resource path="res://Resources/keyboard_button/shift.png" type="Texture" id=15]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Teclado" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Principal" type="Control" parent="Teclado"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoveLeft" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 3.0
+margin_top = 444.0
+margin_right = 49.0
+margin_bottom = 494.0
+
+[node name="MoveRight" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 47.0
+margin_top = 444.0
+margin_right = 93.0
+margin_bottom = 494.0
+
+[node name="Read" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 91.0
+margin_top = 444.0
+margin_right = 137.0
+margin_bottom = 494.0
+
+[node name="Write" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 135.0
+margin_top = 444.0
+margin_right = 181.0
+margin_bottom = 494.0
+
+[node name="Add" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 179.0
+margin_top = 444.0
+margin_right = 225.0
+margin_bottom = 494.0
+
+[node name="Sub" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 223.0
+margin_top = 444.0
+margin_right = 269.0
+margin_bottom = 494.0
+
+[node name="TestZero" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 267.0
+margin_top = 444.0
+margin_right = 313.0
+margin_bottom = 494.0
+
+[node name="TestNegative" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 311.0
+margin_top = 444.0
+margin_right = 357.0
+margin_bottom = 494.0
+
+[node name="ShiftLeft" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 3.0
+margin_top = 492.0
+margin_right = 49.0
+margin_bottom = 542.0
+
+[node name="ShiftRight" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 47.0
+margin_top = 492.0
+margin_right = 93.0
+margin_bottom = 542.0
+
+[node name="Random" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 91.0
+margin_top = 492.0
+margin_right = 137.0
+margin_bottom = 542.0
+
+[node name="Id" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 135.0
+margin_top = 492.0
+margin_right = 181.0
+margin_bottom = 542.0
+
+[node name="Increment" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 179.0
+margin_top = 492.0
+margin_right = 225.0
+margin_bottom = 542.0
+
+[node name="Decrement" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 223.0
+margin_top = 492.0
+margin_right = 269.0
+margin_bottom = 542.0
+
+[node name="LoopBegin" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 267.0
+margin_top = 492.0
+margin_right = 313.0
+margin_bottom = 542.0
+
+[node name="LoopEnd" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 311.0
+margin_top = 492.0
+margin_right = 357.0
+margin_bottom = 542.0
+
+[node name="Shift" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 3.0
+margin_top = 540.0
+margin_right = 49.0
+margin_bottom = 590.0
+icon = ExtResource( 15 )
+
+[node name="Split" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 47.0
+margin_top = 540.0
+margin_right = 93.0
+margin_bottom = 590.0
+
+[node name="Kill" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 91.0
+margin_top = 540.0
+margin_right = 137.0
+margin_bottom = 590.0
+
+[node name="Wait" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 135.0
+margin_top = 540.0
+margin_right = 181.0
+margin_bottom = 590.0
+
+[node name="Alt" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 179.0
+margin_top = 540.0
+margin_right = 225.0
+margin_bottom = 590.0
+
+[node name="Copy" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 223.0
+margin_top = 540.0
+margin_right = 269.0
+margin_bottom = 590.0
+icon = ExtResource( 9 )
+
+[node name="Cut" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 267.0
+margin_top = 540.0
+margin_right = 313.0
+margin_bottom = 590.0
+icon = ExtResource( 10 )
+
+[node name="Backspace" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 311.0
+margin_top = 540.0
+margin_right = 357.0
+margin_bottom = 590.0
+icon = ExtResource( 11 )
+
+[node name="Spacebar" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 135.0
+margin_top = 588.0
+margin_right = 225.0
+margin_bottom = 638.0
+
+[node name="Select" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 223.0
+margin_top = 588.0
+margin_right = 269.0
+margin_bottom = 638.0
+toggle_mode = true
+icon = ExtResource( 7 )
+
+[node name="Paste" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 267.0
+margin_top = 588.0
+margin_right = 313.0
+margin_bottom = 638.0
+icon = ExtResource( 8 )
+
+[node name="Enter" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 311.0
+margin_top = 588.0
+margin_right = 357.0
+margin_bottom = 638.0
+icon = ExtResource( 13 )
+
+[node name="Left" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 3.0
+margin_top = 588.0
+margin_right = 49.0
+margin_bottom = 638.0
+icon = ExtResource( 5 )
+
+[node name="Right" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 91.0
+margin_top = 588.0
+margin_right = 137.0
+margin_bottom = 638.0
+icon = ExtResource( 6 )
+
+[node name="Up" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 47.0
+margin_top = 588.0
+margin_right = 93.0
+margin_bottom = 614.0
+icon = ExtResource( 3 )
+
+[node name="Down" parent="Teclado/Principal" instance=ExtResource( 1 )]
+margin_left = 47.0
+margin_top = 612.0
+margin_right = 93.0
+margin_bottom = 638.0
+icon = ExtResource( 4 )
+
+[node name="Alfabeto" type="Control" parent="Teclado"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Q" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 7.0
+margin_top = 444.0
+margin_right = 44.0
+margin_bottom = 494.0
+
+[node name="W" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 41.0
+margin_top = 444.0
+margin_right = 78.0
+margin_bottom = 494.0
+
+[node name="E" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 75.0
+margin_top = 444.0
+margin_right = 112.0
+margin_bottom = 494.0
+
+[node name="R" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 109.0
+margin_top = 444.0
+margin_right = 146.0
+margin_bottom = 494.0
+
+[node name="T" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 143.0
+margin_top = 444.0
+margin_right = 180.0
+margin_bottom = 494.0
+
+[node name="Y" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 177.0
+margin_top = 444.0
+margin_right = 214.0
+margin_bottom = 494.0
+
+[node name="U" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 211.0
+margin_top = 444.0
+margin_right = 248.0
+margin_bottom = 494.0
+
+[node name="I" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+anchor_left = -0.025
+anchor_right = -0.025
+margin_left = 247.0
+margin_top = 444.0
+margin_right = 284.0
+margin_bottom = 494.0
+
+[node name="O" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 281.0
+margin_top = 444.0
+margin_right = 318.0
+margin_bottom = 494.0
+
+[node name="P" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 316.0
+margin_top = 444.0
+margin_right = 353.0
+margin_bottom = 494.0
+
+[node name="A" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 22.0
+margin_top = 492.0
+margin_right = 59.0
+margin_bottom = 542.0
+
+[node name="S" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 57.0
+margin_top = 492.0
+margin_right = 94.0
+margin_bottom = 542.0
+
+[node name="D" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 92.0
+margin_top = 492.0
+margin_right = 129.0
+margin_bottom = 542.0
+
+[node name="F" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 127.0
+margin_top = 492.0
+margin_right = 164.0
+margin_bottom = 542.0
+
+[node name="G" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 162.0
+margin_top = 492.0
+margin_right = 199.0
+margin_bottom = 542.0
+
+[node name="H" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 197.0
+margin_top = 492.0
+margin_right = 234.0
+margin_bottom = 542.0
+
+[node name="J" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 232.0
+margin_top = 492.0
+margin_right = 269.0
+margin_bottom = 542.0
+
+[node name="K" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 267.0
+margin_top = 492.0
+margin_right = 304.0
+margin_bottom = 542.0
+
+[node name="L" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 302.0
+margin_top = 492.0
+margin_right = 339.0
+margin_bottom = 542.0
+
+[node name="Z" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 47.0
+margin_top = 540.0
+margin_right = 84.0
+margin_bottom = 590.0
+
+[node name="X" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 82.0
+margin_top = 540.0
+margin_right = 119.0
+margin_bottom = 590.0
+
+[node name="C" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 117.0
+margin_top = 540.0
+margin_right = 154.0
+margin_bottom = 590.0
+
+[node name="V" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 152.0
+margin_top = 540.0
+margin_right = 189.0
+margin_bottom = 590.0
+
+[node name="B" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 187.0
+margin_top = 540.0
+margin_right = 224.0
+margin_bottom = 590.0
+
+[node name="N" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 222.0
+margin_top = 540.0
+margin_right = 259.0
+margin_bottom = 590.0
+
+[node name="M" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 257.0
+margin_top = 540.0
+margin_right = 294.0
+margin_bottom = 590.0
+
+[node name="Shift" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 3.0
+margin_top = 540.0
+margin_right = 49.0
+margin_bottom = 590.0
+icon = ExtResource( 15 )
+
+[node name="Backspace" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 292.0
+margin_top = 540.0
+margin_right = 357.0
+margin_bottom = 590.0
+icon = ExtResource( 12 )
+
+[node name="Spacebar" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 135.0
+margin_top = 588.0
+margin_right = 250.0
+margin_bottom = 638.0
+
+[node name="Select" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 248.0
+margin_top = 588.0
+margin_right = 294.0
+margin_bottom = 638.0
+toggle_mode = true
+icon = ExtResource( 7 )
+
+[node name="Enter" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 292.0
+margin_top = 588.0
+margin_right = 357.0
+margin_bottom = 638.0
+icon = ExtResource( 14 )
+
+[node name="Left" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 3.0
+margin_top = 588.0
+margin_right = 49.0
+margin_bottom = 638.0
+icon = ExtResource( 5 )
+
+[node name="Right" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 91.0
+margin_top = 588.0
+margin_right = 137.0
+margin_bottom = 638.0
+icon = ExtResource( 6 )
+
+[node name="Up" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 47.0
+margin_top = 588.0
+margin_right = 93.0
+margin_bottom = 614.0
+icon = ExtResource( 3 )
+
+[node name="Down" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+margin_left = 47.0
+margin_top = 612.0
+margin_right = 93.0
+margin_bottom = 638.0
+icon = ExtResource( 4 )
+[connection signal="pressed" from="Teclado/Principal/Shift" to="Teclado" method="_on_Shift_pressed"]
+[connection signal="pressed" from="Teclado/Principal/Select" to="Teclado" method="_on_Select_pressed"]
+[connection signal="pressed" from="Teclado/Alfabeto/Shift" to="Teclado" method="_on_Shift_pressed"]
+[connection signal="pressed" from="Teclado/Alfabeto/Select" to="Teclado" method="_on_Select_pressed"]
