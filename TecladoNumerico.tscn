@@ -1,0 +1,172 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/keyboard_button/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/var.png" type="Texture" id=2]
+[ext_resource path="res://scripts/TecladoNumerico.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 8, 8 )
+margin_left = 4.0
+margin_right = 2.0
+margin_top = 4.0
+margin_bottom = 2.0
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://fonts/monogram_extended.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = SubResource( 2 )
+
+[node name="TecladoNumerico" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.297302
+margin_right = -0.297302
+rect_min_size = Vector2( 152, 184 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sete" parent="." instance=ExtResource( 1 )]
+margin_top = 32.0
+margin_right = 40.0
+margin_bottom = 72.0
+disabled = true
+text = "7"
+
+[node name="Oito" parent="." instance=ExtResource( 1 )]
+margin_left = 38.0
+margin_top = 32.0
+margin_right = 78.0
+margin_bottom = 72.0
+disabled = true
+text = "8"
+
+[node name="Nove" parent="." instance=ExtResource( 1 )]
+margin_left = 76.0
+margin_top = 32.0
+margin_right = 116.0
+margin_bottom = 72.0
+disabled = true
+text = "9"
+
+[node name="Negativo" parent="." instance=ExtResource( 1 )]
+margin_left = 114.0
+margin_top = 32.0
+margin_right = 154.0
+margin_bottom = 72.0
+disabled = true
+text = "-"
+
+[node name="Quatro" parent="." instance=ExtResource( 1 )]
+margin_left = -0.374573
+margin_top = 70.0
+margin_right = 39.6254
+margin_bottom = 110.0
+disabled = true
+text = "4"
+
+[node name="Cinco" parent="." instance=ExtResource( 1 )]
+margin_left = 37.6254
+margin_top = 70.0
+margin_right = 77.6254
+margin_bottom = 110.0
+disabled = true
+text = "5"
+
+[node name="Seis" parent="." instance=ExtResource( 1 )]
+margin_left = 75.6254
+margin_top = 70.0
+margin_right = 115.625
+margin_bottom = 110.0
+disabled = true
+text = "6"
+
+[node name="Limpar" parent="." instance=ExtResource( 1 )]
+margin_left = 113.625
+margin_top = 70.0
+margin_right = 153.625
+margin_bottom = 110.0
+disabled = true
+text = "C"
+
+[node name="Um" parent="." instance=ExtResource( 1 )]
+margin_top = 108.0
+margin_right = 40.0
+margin_bottom = 148.0
+disabled = true
+text = "1"
+
+[node name="Dois" parent="." instance=ExtResource( 1 )]
+margin_left = 38.0
+margin_top = 108.0
+margin_right = 78.0
+margin_bottom = 148.0
+disabled = true
+text = "2"
+
+[node name="Tres" parent="." instance=ExtResource( 1 )]
+margin_left = 76.0
+margin_top = 108.0
+margin_right = 116.0
+margin_bottom = 148.0
+disabled = true
+text = "3"
+
+[node name="Backspace" parent="." instance=ExtResource( 1 )]
+margin_left = 114.0
+margin_top = 108.0
+margin_right = 154.0
+margin_bottom = 148.0
+disabled = true
+text = "<"
+
+[node name="Zero" parent="." instance=ExtResource( 1 )]
+margin_top = 146.0
+margin_right = 78.0
+margin_bottom = 186.0
+disabled = true
+text = "0"
+
+[node name="Enter" parent="." instance=ExtResource( 1 )]
+margin_left = 76.4703
+margin_top = 146.47
+margin_right = 154.47
+margin_bottom = 186.47
+disabled = true
+text = "ENTER"
+
+[node name="Tela" type="PanelContainer" parent="."]
+margin_right = 154.0
+margin_bottom = 34.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Tela"]
+margin_left = 4.0
+margin_top = 5.0
+margin_right = 152.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "AGUARDANDO"
+align = 1
+[connection signal="pressed" from="Sete" to="." method="_on_Num_pressed" binds= [ 7 ]]
+[connection signal="pressed" from="Oito" to="." method="_on_Num_pressed" binds= [ 8 ]]
+[connection signal="pressed" from="Nove" to="." method="_on_Num_pressed" binds= [ 9 ]]
+[connection signal="pressed" from="Negativo" to="." method="_on_Neg_pressed"]
+[connection signal="pressed" from="Quatro" to="." method="_on_Num_pressed" binds= [ 4 ]]
+[connection signal="pressed" from="Cinco" to="." method="_on_Num_pressed" binds= [ 5 ]]
+[connection signal="pressed" from="Seis" to="." method="_on_Num_pressed" binds= [ 6 ]]
+[connection signal="pressed" from="Limpar" to="." method="_on_Clear_pressed"]
+[connection signal="pressed" from="Um" to="." method="_on_Num_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="Dois" to="." method="_on_Num_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="Tres" to="." method="_on_Num_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="Backspace" to="." method="_on_Backspace_pressed"]
+[connection signal="pressed" from="Zero" to="." method="_on_Num_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="Enter" to="." method="_on_Enter_pressed"]

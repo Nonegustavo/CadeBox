@@ -1,20 +1,133 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=40 format=2]
 
-[ext_resource path="res://Resources/keyboard_button/Button.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Resources/project_scene/Teclado/Teclado.gd" type="Script" id=2]
-[ext_resource path="res://Resources/keyboard_button/arrow_up.png" type="Texture" id=3]
-[ext_resource path="res://Resources/keyboard_button/arrow_down.png" type="Texture" id=4]
-[ext_resource path="res://Resources/keyboard_button/arrow_left.png" type="Texture" id=5]
-[ext_resource path="res://Resources/keyboard_button/arrow_right.png" type="Texture" id=6]
-[ext_resource path="res://Resources/keyboard_button/select.png" type="Texture" id=7]
-[ext_resource path="res://Resources/keyboard_button/paste.png" type="Texture" id=8]
-[ext_resource path="res://Resources/keyboard_button/copy.png" type="Texture" id=9]
-[ext_resource path="res://Resources/keyboard_button/cut.png" type="Texture" id=10]
-[ext_resource path="res://Resources/keyboard_button/backspace1.png" type="Texture" id=11]
-[ext_resource path="res://Resources/keyboard_button/backspace2.png" type="Texture" id=12]
-[ext_resource path="res://Resources/keyboard_button/enter1.png" type="Texture" id=13]
-[ext_resource path="res://Resources/keyboard_button/enter2.png" type="Texture" id=14]
-[ext_resource path="res://Resources/keyboard_button/shift.png" type="Texture" id=15]
+[ext_resource path="res://Teclado.tscn" type="PackedScene" id=1]
+[ext_resource path="res://AbaAzul.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Variavel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://AbaVerde.tscn" type="PackedScene" id=4]
+[ext_resource path="res://images/green-line.png" type="Texture" id=5]
+[ext_resource path="res://images/code-png.png" type="Texture" id=6]
+[ext_resource path="res://images/back.png" type="Texture" id=7]
+[ext_resource path="res://images/help.png" type="Texture" id=8]
+[ext_resource path="res://images/task.png" type="Texture" id=9]
+[ext_resource path="res://TecladoNumerico.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/keyboard_button/Button.tscn" type="PackedScene" id=11]
+[ext_resource path="res://images/out.png" type="Texture" id=12]
+[ext_resource path="res://images/play.png" type="Texture" id=14]
+[ext_resource path="res://images/play-icon.png" type="Texture" id=15]
+[ext_resource path="res://images/step-icon.png" type="Texture" id=16]
+[ext_resource path="res://images/fast-icon.png" type="Texture" id=17]
+[ext_resource path="res://images/stop-icon.png" type="Texture" id=18]
+[ext_resource path="res://scripts/Tabs.gd" type="Script" id=19]
+[ext_resource path="res://scripts/Tela.gd" type="Script" id=20]
+[ext_resource path="res://scripts/CodeText.gd" type="Script" id=21]
+[ext_resource path="res://Resources/project_scene/Machine.gd" type="Script" id=22]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="Theme" id=2]
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = SubResource( 1 )
+VScrollBar/styles/scroll_focus = null
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 14, 14 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://fonts/monogram_extended.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 48
+extra_spacing_top = -7
+extra_spacing_bottom = -7
+extra_spacing_char = 4
+font_data = SubResource( 4 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="Theme" id=7]
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = null
+HScrollBar/styles/grabber_highlight = null
+HScrollBar/styles/grabber_pressed = null
+HScrollBar/styles/scroll = SubResource( 6 )
+HScrollBar/styles/scroll_focus = null
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 14, 14 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://fonts/monogram_extended.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 32
+extra_spacing_top = -7
+font_data = SubResource( 9 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 8, 8 )
+margin_left = 4.0
+margin_right = 2.0
+margin_top = 4.0
+margin_bottom = 2.0
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://fonts/monogram_extended.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 32
+font_data = SubResource( 12 )
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="Theme" id=15]
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = SubResource( 14 )
+VScrollBar/styles/scroll_focus = null
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.305882, 0.305882, 0.513726, 1 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 14 )
+region_rect = Rect2( 10, 0, 10, 12 )
+margin_left = 4.0
+margin_right = 4.0
+margin_top = 4.0
+margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 10, 12 )
+margin_left = 4.0
+margin_right = 4.0
+margin_top = 4.0
+margin_bottom = 6.0
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -24,454 +137,414 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Teclado" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 2 )
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 56.0
+rect_min_size = Vector2( 50, 50 )
+color = Color( 0.407843, 0.784314, 0.568627, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Principal" type="Control" parent="Teclado"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Tela" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3.05176e-05
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+script = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MoveLeft" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 3.0
-margin_top = 444.0
-margin_right = 49.0
-margin_bottom = 494.0
+[node name="Timer" type="Timer" parent="Tela"]
 
-[node name="MoveRight" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 47.0
-margin_top = 444.0
-margin_right = 93.0
-margin_bottom = 494.0
+[node name="Top" type="MarginContainer" parent="Tela"]
+margin_right = 360.0
+margin_bottom = 56.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
 
-[node name="Read" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 91.0
-margin_top = 444.0
-margin_right = 137.0
-margin_bottom = 494.0
+[node name="BgTop" type="ColorRect" parent="Tela/Top"]
+margin_right = 360.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 50, 50 )
+color = Color( 0.129412, 0.121569, 0.231373, 1 )
 
-[node name="Write" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 135.0
-margin_top = 444.0
-margin_right = 181.0
-margin_bottom = 494.0
+[node name="HBox" type="HBoxContainer" parent="Tela/Top"]
+margin_right = 360.0
+margin_bottom = 56.0
 
-[node name="Add" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 179.0
-margin_top = 444.0
-margin_right = 225.0
-margin_bottom = 494.0
+[node name="Back" type="VBoxContainer" parent="Tela/Top/HBox"]
+margin_right = 50.0
+margin_bottom = 56.0
 
-[node name="Sub" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 223.0
-margin_top = 444.0
-margin_right = 269.0
-margin_bottom = 494.0
+[node name="BackButton" type="TextureButton" parent="Tela/Top/HBox/Back"]
+margin_right = 50.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+texture_disabled = ExtResource( 7 )
+texture_focused = ExtResource( 7 )
 
-[node name="TestZero" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 267.0
-margin_top = 444.0
-margin_right = 313.0
-margin_bottom = 494.0
+[node name="Texture" type="TextureRect" parent="Tela/Top/HBox/Back"]
+margin_top = 52.0
+margin_right = 50.0
+margin_bottom = 56.0
+texture = ExtResource( 5 )
 
-[node name="TestNegative" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 311.0
-margin_top = 444.0
+[node name="Files" type="MarginContainer" parent="Tela/Top/HBox"]
+margin_left = 54.0
+margin_right = 306.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+custom_constants/margin_right = -4
+custom_constants/margin_top = 7
+custom_constants/margin_left = -4
+script = ExtResource( 20 )
+
+[node name="Tabs" type="HBoxContainer" parent="Tela/Top/HBox/Files"]
+margin_left = -4.0
+margin_top = 7.0
+margin_right = 256.0
+margin_bottom = 56.0
+custom_constants/separation = 0
+
+[node name="File1" parent="Tela/Top/HBox/Files/Tabs" instance=ExtResource( 4 )]
+margin_right = 86.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+disabled = true
+text = "#1"
+
+[node name="File2" parent="Tela/Top/HBox/Files/Tabs" instance=ExtResource( 4 )]
+margin_left = 86.0
+margin_right = 173.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+text = "#2"
+
+[node name="File3" parent="Tela/Top/HBox/Files/Tabs" instance=ExtResource( 4 )]
+margin_left = 173.0
+margin_right = 260.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+text = "#3"
+
+[node name="Help" type="VBoxContainer" parent="Tela/Top/HBox"]
+margin_left = 310.0
+margin_right = 360.0
+margin_bottom = 56.0
+
+[node name="HelpButton" type="TextureButton" parent="Tela/Top/HBox/Help"]
+margin_right = 50.0
+margin_bottom = 48.0
+focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
+
+[node name="Texture" type="TextureRect" parent="Tela/Top/HBox/Help"]
+margin_top = 52.0
+margin_right = 50.0
+margin_bottom = 56.0
+texture = ExtResource( 5 )
+
+[node name="Code" type="MarginContainer" parent="Tela"]
+margin_top = 56.0
+margin_right = 360.0
+margin_bottom = 344.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 5
+custom_constants/margin_top = 10
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 8
+
+[node name="Text" type="TextEdit" parent="Tela/Code"]
+margin_left = 5.0
+margin_top = 10.0
+margin_right = 355.0
+margin_bottom = 280.0
+theme = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/member_variable_color = Color( 0.407843, 0.784314, 0.568627, 1 )
+custom_colors/function_color = Color( 0.407843, 0.784314, 0.568627, 1 )
+custom_colors/symbol_color = Color( 0.407843, 0.788235, 0.505882, 1 )
+custom_colors/caret_background_color = Color( 0, 0.133333, 0.0588235, 1 )
+custom_colors/bookmark_color = Color( 0.407843, 0.784314, 0.568627, 1 )
+custom_colors/selection_color = Color( 0.0745098, 0.298039, 0.168627, 1 )
+custom_colors/caret_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_selected = Color( 0, 0.133333, 0.0588235, 1 )
+custom_colors/font_color = Color( 0.407843, 0.788235, 0.505882, 0.235294 )
+custom_colors/number_color = Color( 0.407843, 0.784314, 0.568627, 1 )
+custom_colors/brace_mismatch_color = Color( 0.407843, 0.784314, 0.568627, 1 )
+custom_colors/mark_color = Color( 0.407843, 0.784314, 0.568627, 1 )
+custom_colors/font_color_readonly = Color( 0.187454, 0.527344, 0.275055, 1 )
+custom_constants/line_spacing = 1
+text = "[..aaaa
+[
+[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[
+[[["
+syntax_highlighting = true
+override_selected_font_color = true
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+v_scroll_speed = 100.0
+wrap_enabled = true
+caret_moving_by_right_click = false
+script = ExtResource( 21 )
+
+[node name="Machine" type="MarginContainer" parent="Tela"]
+margin_top = 344.0
+margin_right = 360.0
+margin_bottom = 406.0
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+script = ExtResource( 22 )
+
+[node name="HBox" type="HBoxContainer" parent="Tela/Machine"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 356.0
+margin_bottom = 58.0
+custom_constants/separation = 8
+
+[node name="Registrador" parent="Tela/Machine/HBox" instance=ExtResource( 3 )]
+
+[node name="Tape" type="ScrollContainer" parent="Tela/Machine/HBox"]
+margin_left = 62.0
+margin_right = 352.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+theme = SubResource( 7 )
+follow_focus = true
+scroll_vertical_enabled = false
+
+[node name="List" type="HBoxContainer" parent="Tela/Machine/HBox/Tape"]
+mouse_filter = 2
+custom_constants/separation = -2
+
+[node name="Tabs" type="HBoxContainer" parent="Tela"]
+margin_top = 406.0
+margin_right = 360.0
+margin_bottom = 446.0
+rect_min_size = Vector2( 0, 40 )
+custom_constants/separation = 0
+script = ExtResource( 19 )
+
+[node name="Tarefa" parent="Tela/Tabs" instance=ExtResource( 2 )]
+margin_right = 120.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+disabled = true
+text = "TAREFA"
+
+[node name="Teclado" parent="Tela/Tabs" instance=ExtResource( 2 )]
+margin_left = 120.0
+margin_right = 240.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = "TECLADO"
+
+[node name="Testar" parent="Tela/Tabs" instance=ExtResource( 2 )]
+margin_left = 240.0
+margin_right = 360.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = "TESTAR"
+
+[node name="Panels" type="CenterContainer" parent="Tela"]
+margin_top = 446.0
+margin_right = 360.0
+margin_bottom = 640.0
+rect_min_size = Vector2( 360, 190 )
+size_flags_horizontal = 3
+
+[node name="Panelbg" type="ColorRect" parent="Tela/Panels"]
+margin_right = 360.0
+margin_bottom = 194.0
+rect_min_size = Vector2( 360, 194 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.47451, 0.47451, 0.694118, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tarefa" type="PanelContainer" parent="Tela/Panels"]
+margin_left = 2.0
+margin_top = 2.0
 margin_right = 357.0
-margin_bottom = 494.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 355, 190 )
+size_flags_vertical = 2
+custom_styles/panel = SubResource( 8 )
 
-[node name="ShiftLeft" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 3.0
-margin_top = 492.0
-margin_right = 49.0
-margin_bottom = 542.0
+[node name="Quadro" type="RichTextLabel" parent="Tela/Panels/Tarefa"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 349.0
+margin_bottom = 184.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 10 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+text = "> => proxima celula
+< => celula anterior
+: => celula = memoria
+. => memoria = celula
++ => memoria += celula
+- => memoria -= celula
+/ => memoria++
+\\ => memoria--
+\" => memoria = entrada
+' => saida = memoria
+! => if zero: memoria=1
+? => if negative: memoria=1
+@ => swap(memoria, celula)
+[ => while memoria != 0
+] => end while"
 
-[node name="ShiftRight" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 47.0
-margin_top = 492.0
-margin_right = 93.0
-margin_bottom = 542.0
-
-[node name="Random" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 91.0
-margin_top = 492.0
-margin_right = 137.0
-margin_bottom = 542.0
-
-[node name="Id" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 135.0
-margin_top = 492.0
-margin_right = 181.0
-margin_bottom = 542.0
-
-[node name="Increment" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 179.0
-margin_top = 492.0
-margin_right = 225.0
-margin_bottom = 542.0
-
-[node name="Decrement" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 223.0
-margin_top = 492.0
-margin_right = 269.0
-margin_bottom = 542.0
-
-[node name="LoopBegin" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 267.0
-margin_top = 492.0
-margin_right = 313.0
-margin_bottom = 542.0
-
-[node name="LoopEnd" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 311.0
-margin_top = 492.0
-margin_right = 357.0
-margin_bottom = 542.0
-
-[node name="Shift" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 3.0
-margin_top = 540.0
-margin_right = 49.0
-margin_bottom = 590.0
-icon = ExtResource( 15 )
-
-[node name="Split" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 47.0
-margin_top = 540.0
-margin_right = 93.0
-margin_bottom = 590.0
-
-[node name="Kill" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 91.0
-margin_top = 540.0
-margin_right = 137.0
-margin_bottom = 590.0
-
-[node name="Wait" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 135.0
-margin_top = 540.0
-margin_right = 181.0
-margin_bottom = 590.0
-
-[node name="Alt" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 179.0
-margin_top = 540.0
-margin_right = 225.0
-margin_bottom = 590.0
-
-[node name="Copy" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 223.0
-margin_top = 540.0
-margin_right = 269.0
-margin_bottom = 590.0
-icon = ExtResource( 9 )
-
-[node name="Cut" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 267.0
-margin_top = 540.0
-margin_right = 313.0
-margin_bottom = 590.0
-icon = ExtResource( 10 )
-
-[node name="Backspace" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 311.0
-margin_top = 540.0
-margin_right = 357.0
-margin_bottom = 590.0
-icon = ExtResource( 11 )
-
-[node name="Spacebar" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 135.0
-margin_top = 588.0
-margin_right = 225.0
-margin_bottom = 638.0
-
-[node name="Select" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 223.0
-margin_top = 588.0
-margin_right = 269.0
-margin_bottom = 638.0
-toggle_mode = true
-icon = ExtResource( 7 )
-
-[node name="Paste" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 267.0
-margin_top = 588.0
-margin_right = 313.0
-margin_bottom = 638.0
-icon = ExtResource( 8 )
-
-[node name="Enter" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 311.0
-margin_top = 588.0
-margin_right = 357.0
-margin_bottom = 638.0
-icon = ExtResource( 13 )
-
-[node name="Left" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 3.0
-margin_top = 588.0
-margin_right = 49.0
-margin_bottom = 638.0
-icon = ExtResource( 5 )
-
-[node name="Right" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 91.0
-margin_top = 588.0
-margin_right = 137.0
-margin_bottom = 638.0
-icon = ExtResource( 6 )
-
-[node name="Up" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 47.0
-margin_top = 588.0
-margin_right = 93.0
-margin_bottom = 614.0
-icon = ExtResource( 3 )
-
-[node name="Down" parent="Teclado/Principal" instance=ExtResource( 1 )]
-margin_left = 47.0
-margin_top = 612.0
-margin_right = 93.0
-margin_bottom = 638.0
-icon = ExtResource( 4 )
-
-[node name="Alfabeto" type="Control" parent="Teclado"]
+[node name="Teclado" parent="Tela/Panels" instance=ExtResource( 1 )]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_top = 2.0
+margin_bottom = 192.0
 
-[node name="Q" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 7.0
-margin_top = 444.0
-margin_right = 44.0
-margin_bottom = 494.0
+[node name="Testar" type="MarginContainer" parent="Tela/Panels"]
+visible = false
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 357.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 355, 190 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 4
+custom_constants/margin_top = 1
+custom_constants/margin_left = 4
 
-[node name="W" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 41.0
-margin_top = 444.0
-margin_right = 78.0
-margin_bottom = 494.0
+[node name="HBox" type="HBoxContainer" parent="Tela/Panels/Testar"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 351.0
+margin_bottom = 190.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
 
-[node name="E" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 75.0
-margin_top = 444.0
-margin_right = 112.0
-margin_bottom = 494.0
+[node name="TecladoNumerico" parent="Tela/Panels/Testar/HBox" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_right = 152.0
+margin_bottom = 189.0
 
-[node name="R" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 109.0
-margin_top = 444.0
-margin_right = 146.0
-margin_bottom = 494.0
-
-[node name="T" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 143.0
-margin_top = 444.0
-margin_right = 180.0
-margin_bottom = 494.0
-
-[node name="Y" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 177.0
-margin_top = 444.0
-margin_right = 214.0
-margin_bottom = 494.0
-
-[node name="U" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 211.0
-margin_top = 444.0
-margin_right = 248.0
-margin_bottom = 494.0
-
-[node name="I" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-anchor_left = -0.025
-anchor_right = -0.025
-margin_left = 247.0
-margin_top = 444.0
-margin_right = 284.0
-margin_bottom = 494.0
-
-[node name="O" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 281.0
-margin_top = 444.0
-margin_right = 318.0
-margin_bottom = 494.0
-
-[node name="P" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 316.0
-margin_top = 444.0
-margin_right = 353.0
-margin_bottom = 494.0
-
-[node name="A" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 22.0
-margin_top = 492.0
-margin_right = 59.0
-margin_bottom = 542.0
-
-[node name="S" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 57.0
-margin_top = 492.0
-margin_right = 94.0
-margin_bottom = 542.0
-
-[node name="D" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 92.0
-margin_top = 492.0
-margin_right = 129.0
-margin_bottom = 542.0
-
-[node name="F" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 127.0
-margin_top = 492.0
-margin_right = 164.0
-margin_bottom = 542.0
-
-[node name="G" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
+[node name="VBox" type="VBoxContainer" parent="Tela/Panels/Testar/HBox"]
 margin_left = 162.0
-margin_top = 492.0
-margin_right = 199.0
-margin_bottom = 542.0
+margin_right = 289.0
+margin_bottom = 189.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
 
-[node name="H" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 197.0
-margin_top = 492.0
-margin_right = 234.0
-margin_bottom = 542.0
+[node name="Label" type="Label" parent="Tela/Panels/Testar/HBox/VBox"]
+margin_right = 127.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SAIDA"
+align = 1
 
-[node name="J" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 232.0
-margin_top = 492.0
-margin_right = 269.0
-margin_bottom = 542.0
+[node name="Scroll" type="ScrollContainer" parent="Tela/Panels/Testar/HBox/VBox"]
+margin_top = 32.0
+margin_right = 127.0
+margin_bottom = 189.0
+size_flags_vertical = 3
+theme = SubResource( 15 )
+custom_styles/bg = SubResource( 16 )
+follow_focus = true
+scroll_horizontal_enabled = false
 
-[node name="K" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 267.0
-margin_top = 492.0
-margin_right = 304.0
-margin_bottom = 542.0
+[node name="Saida" type="VBoxContainer" parent="Tela/Panels/Testar/HBox/VBox/Scroll"]
+margin_right = 127.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
 
-[node name="L" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 302.0
-margin_top = 492.0
-margin_right = 339.0
-margin_bottom = 542.0
+[node name="Botoes" type="VBoxContainer" parent="Tela/Panels/Testar/HBox"]
+margin_left = 299.0
+margin_right = 347.0
+margin_bottom = 189.0
+custom_constants/separation = -2
 
-[node name="Z" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 47.0
-margin_top = 540.0
-margin_right = 84.0
-margin_bottom = 590.0
-
-[node name="X" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 82.0
-margin_top = 540.0
-margin_right = 119.0
-margin_bottom = 590.0
-
-[node name="C" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 117.0
-margin_top = 540.0
-margin_right = 154.0
-margin_bottom = 590.0
-
-[node name="V" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 152.0
-margin_top = 540.0
-margin_right = 189.0
-margin_bottom = 590.0
-
-[node name="B" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 187.0
-margin_top = 540.0
-margin_right = 224.0
-margin_bottom = 590.0
-
-[node name="N" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 222.0
-margin_top = 540.0
-margin_right = 259.0
-margin_bottom = 590.0
-
-[node name="M" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 257.0
-margin_top = 540.0
-margin_right = 294.0
-margin_bottom = 590.0
-
-[node name="Shift" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 3.0
-margin_top = 540.0
-margin_right = 49.0
-margin_bottom = 590.0
+[node name="Play" parent="Tela/Panels/Testar/HBox/Botoes" instance=ExtResource( 11 )]
+margin_right = 48.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
 icon = ExtResource( 15 )
 
-[node name="Backspace" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 292.0
-margin_top = 540.0
-margin_right = 357.0
-margin_bottom = 590.0
-icon = ExtResource( 12 )
+[node name="Fast" parent="Tela/Panels/Testar/HBox/Botoes" instance=ExtResource( 11 )]
+margin_top = 46.0
+margin_right = 48.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 48, 48 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+icon = ExtResource( 17 )
 
-[node name="Spacebar" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 135.0
-margin_top = 588.0
-margin_right = 250.0
-margin_bottom = 638.0
+[node name="Step" parent="Tela/Panels/Testar/HBox/Botoes" instance=ExtResource( 11 )]
+margin_top = 92.0
+margin_right = 48.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 48, 48 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+icon = ExtResource( 16 )
 
-[node name="Select" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 248.0
-margin_top = 588.0
-margin_right = 294.0
-margin_bottom = 638.0
-toggle_mode = true
-icon = ExtResource( 7 )
-
-[node name="Enter" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 292.0
-margin_top = 588.0
-margin_right = 357.0
-margin_bottom = 638.0
-icon = ExtResource( 14 )
-
-[node name="Left" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 3.0
-margin_top = 588.0
-margin_right = 49.0
-margin_bottom = 638.0
-icon = ExtResource( 5 )
-
-[node name="Right" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 91.0
-margin_top = 588.0
-margin_right = 137.0
-margin_bottom = 638.0
-icon = ExtResource( 6 )
-
-[node name="Up" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 47.0
-margin_top = 588.0
-margin_right = 93.0
-margin_bottom = 614.0
-icon = ExtResource( 3 )
-
-[node name="Down" parent="Teclado/Alfabeto" instance=ExtResource( 1 )]
-margin_left = 47.0
-margin_top = 612.0
-margin_right = 93.0
-margin_bottom = 638.0
-icon = ExtResource( 4 )
-[connection signal="pressed" from="Teclado/Principal/Shift" to="Teclado" method="_on_Shift_pressed"]
-[connection signal="pressed" from="Teclado/Principal/Select" to="Teclado" method="_on_Select_pressed"]
-[connection signal="pressed" from="Teclado/Alfabeto/Shift" to="Teclado" method="_on_Shift_pressed"]
-[connection signal="pressed" from="Teclado/Alfabeto/Select" to="Teclado" method="_on_Select_pressed"]
+[node name="Stop" parent="Tela/Panels/Testar/HBox/Botoes" instance=ExtResource( 11 )]
+margin_top = 138.0
+margin_right = 48.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 48, 48 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+disabled = true
+icon = ExtResource( 18 )
+[connection signal="timeout" from="Tela/Timer" to="Tela" method="_on_Timer_timeout"]
+[connection signal="pressed" from="Tela/Top/HBox/Files/Tabs/File1" to="Tela" method="_on_Tab_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="Tela/Top/HBox/Files/Tabs/File2" to="Tela" method="_on_Tab_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="Tela/Top/HBox/Files/Tabs/File3" to="Tela" method="_on_Tab_pressed" binds= [ 2 ]]
+[connection signal="deselect_text" from="Tela/Code/Text" to="Tela/Panels/Teclado" method="_on_Text_deselect_text"]
+[connection signal="pressed" from="Tela/Tabs/Tarefa" to="Tela/Tabs" method="_on_Tab_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="Tela/Tabs/Tarefa" to="Tela" method="_on_Stop_pressed"]
+[connection signal="pressed" from="Tela/Tabs/Teclado" to="Tela/Tabs" method="_on_Tab_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="Tela/Tabs/Teclado" to="Tela" method="_on_Stop_pressed"]
+[connection signal="pressed" from="Tela/Tabs/Testar" to="Tela/Tabs" method="_on_Tab_pressed" binds= [ 2 ]]
+[connection signal="action_pressed" from="Tela/Panels/Teclado" to="Tela/Code/Text" method="_on_Teclado_action_pressed"]
+[connection signal="arrow_pressed" from="Tela/Panels/Teclado" to="Tela/Code/Text" method="_on_Teclado_arrow_pressed"]
+[connection signal="backspace_pressed" from="Tela/Panels/Teclado" to="Tela/Code/Text" method="_on_Teclado_backspace_pressed"]
+[connection signal="char_typed" from="Tela/Panels/Teclado" to="Tela/Code/Text" method="_on_Teclado_char_typed"]
+[connection signal="select_pressed" from="Tela/Panels/Teclado" to="Tela/Code/Text" method="_on_Teclado_select_pressed"]
+[connection signal="newEntry" from="Tela/Panels/Testar/HBox/TecladoNumerico" to="Tela" method="_on_TecladoNumerico_newEntry"]
+[connection signal="pressed" from="Tela/Panels/Testar/HBox/Botoes/Play" to="Tela" method="_on_Play_pressed"]
+[connection signal="pressed" from="Tela/Panels/Testar/HBox/Botoes/Fast" to="Tela" method="_on_Fast_pressed"]
+[connection signal="pressed" from="Tela/Panels/Testar/HBox/Botoes/Step" to="Tela" method="_on_Step_pressed"]
+[connection signal="pressed" from="Tela/Panels/Testar/HBox/Botoes/Stop" to="Tela" method="_on_Stop_pressed"]

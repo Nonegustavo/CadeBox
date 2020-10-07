@@ -1,0 +1,509 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/keyboard_button/select.png" type="Texture" id=1]
+[ext_resource path="res://Resources/keyboard_button/arrow_right.png" type="Texture" id=2]
+[ext_resource path="res://Resources/keyboard_button/arrow_down.png" type="Texture" id=3]
+[ext_resource path="res://Resources/keyboard_button/arrow_left.png" type="Texture" id=4]
+[ext_resource path="res://Resources/project_scene/Teclado/Teclado.gd" type="Script" id=5]
+[ext_resource path="res://Resources/keyboard_button/shift.png" type="Texture" id=6]
+[ext_resource path="res://Resources/keyboard_button/arrow_up.png" type="Texture" id=8]
+[ext_resource path="res://Resources/keyboard_button/copy.png" type="Texture" id=9]
+[ext_resource path="res://Resources/keyboard_button/backspace1.png" type="Texture" id=10]
+[ext_resource path="res://Resources/keyboard_button/cut.png" type="Texture" id=11]
+[ext_resource path="res://Resources/keyboard_button/paste.png" type="Texture" id=12]
+[ext_resource path="res://Resources/keyboard_button/backspace2.png" type="Texture" id=13]
+[ext_resource path="res://Resources/keyboard_button/enter2.png" type="Texture" id=14]
+[ext_resource path="res://Resources/keyboard_button/Button.tscn" type="PackedScene" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+
+[node name="Teclado" type="Control"]
+margin_right = 360.0
+margin_bottom = 194.0
+rect_min_size = Vector2( 360, 190 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Principal" type="Control" parent="."]
+margin_top = -6.0
+margin_right = 40.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shift" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 3.0
+margin_top = 98.0
+margin_right = 49.0
+margin_bottom = 146.0
+icon = ExtResource( 6 )
+
+[node name="Undo" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 47.0
+margin_top = 98.0
+margin_right = 93.0
+margin_bottom = 146.0
+focus_mode = 2
+
+[node name="Redo" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 91.0
+margin_top = 98.0
+margin_right = 137.0
+margin_bottom = 146.0
+focus_mode = 2
+
+[node name="Cut" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 179.467
+margin_top = 98.0561
+margin_right = 225.467
+margin_bottom = 146.056
+icon = ExtResource( 11 )
+
+[node name="Paste" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 223.257
+margin_top = 98.0561
+margin_right = 269.257
+margin_bottom = 146.056
+icon = ExtResource( 12 )
+
+[node name="Copy" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 135.054
+margin_top = 98.0
+margin_right = 181.054
+margin_bottom = 146.0
+icon = ExtResource( 9 )
+
+[node name="Backspace" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 267.0
+margin_top = 98.0
+margin_right = 357.0
+margin_bottom = 146.0
+icon = ExtResource( 10 )
+
+[node name="Input" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 25.9387
+margin_top = 52.4217
+margin_right = 71.9387
+margin_bottom = 100.422
+text = "\""
+
+[node name="MoveLeft" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 2.93867
+margin_top = 6.42174
+margin_right = 48.9387
+margin_bottom = 54.4217
+text = "<"
+
+[node name="Output" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 69.9387
+margin_top = 52.4217
+margin_right = 115.939
+margin_bottom = 100.422
+text = "'"
+
+[node name="MoveRight" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 46.9387
+margin_top = 6.42174
+margin_right = 92.9387
+margin_bottom = 54.4217
+text = ">"
+
+[node name="IfZero" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 113.939
+margin_top = 52.4217
+margin_right = 159.939
+margin_bottom = 100.422
+text = "!"
+
+[node name="CopyTo" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 90.9387
+margin_top = 6.42174
+margin_right = 136.939
+margin_bottom = 54.4217
+text = "."
+
+[node name="IfNegative" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 157.939
+margin_top = 52.4217
+margin_right = 203.939
+margin_bottom = 100.422
+text = "?"
+
+[node name="CopyFrom" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 135.378
+margin_top = 5.86051
+margin_right = 181.378
+margin_bottom = 53.8605
+text = ":"
+
+[node name="LoopBegin" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 201.939
+margin_top = 52.4217
+margin_right = 247.939
+margin_bottom = 100.422
+text = "["
+
+[node name="Add" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 178.939
+margin_top = 6.42174
+margin_right = 224.939
+margin_bottom = 54.4217
+text = "+"
+
+[node name="LoopEnd" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 245.939
+margin_top = 52.4217
+margin_right = 291.939
+margin_bottom = 100.422
+text = "]"
+
+[node name="Sub" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 222.939
+margin_top = 6.42174
+margin_right = 268.939
+margin_bottom = 54.4217
+text = "-"
+
+[node name="Swap" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 289.939
+margin_top = 52.4217
+margin_right = 335.939
+margin_bottom = 100.422
+text = "@"
+
+[node name="Increments" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 266.939
+margin_top = 6.42174
+margin_right = 312.939
+margin_bottom = 54.4217
+text = "/"
+
+[node name="Decrements" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 310.939
+margin_top = 6.42174
+margin_right = 356.939
+margin_bottom = 54.4217
+text = "\\"
+
+[node name="Alfabeto" type="Control" parent="."]
+visible = false
+margin_top = -6.0
+margin_right = 40.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shift" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 3.0
+margin_top = 98.0
+margin_right = 49.0
+margin_bottom = 146.0
+icon = ExtResource( 6 )
+
+[node name="Z" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 47.4719
+margin_top = 98.2782
+margin_right = 84.4719
+margin_bottom = 146.278
+text = "Z"
+
+[node name="A" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 22.0435
+margin_top = 51.5564
+margin_right = 59.0435
+margin_bottom = 99.5564
+text = "A"
+
+[node name="Q" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 43.0
+margin_bottom = 54.0
+text = "Q"
+
+[node name="W" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 40.6858
+margin_top = 6.23265
+margin_right = 77.6858
+margin_bottom = 54.2327
+text = "W"
+
+[node name="E" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 75.6858
+margin_top = 6.23265
+margin_right = 112.686
+margin_bottom = 54.2327
+text = "E"
+
+[node name="R" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 110.686
+margin_top = 6.23265
+margin_right = 147.686
+margin_bottom = 54.2327
+text = "R"
+
+[node name="T" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 145.686
+margin_top = 6.23265
+margin_right = 182.686
+margin_bottom = 54.2327
+text = "T"
+
+[node name="Y" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 180.686
+margin_top = 6.23265
+margin_right = 217.686
+margin_bottom = 54.2327
+text = "Y"
+
+[node name="U" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 215.686
+margin_top = 6.23265
+margin_right = 252.686
+margin_bottom = 54.2327
+text = "U"
+
+[node name="I" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 250.686
+margin_top = 6.23265
+margin_right = 287.686
+margin_bottom = 54.2327
+text = "I"
+
+[node name="O" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 285.686
+margin_top = 6.23265
+margin_right = 322.686
+margin_bottom = 54.2327
+text = "O"
+
+[node name="P" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 320.686
+margin_top = 6.23265
+margin_right = 357.686
+margin_bottom = 54.2327
+text = "P"
+
+[node name="S" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 57.0435
+margin_top = 51.5564
+margin_right = 94.0435
+margin_bottom = 99.5564
+text = "S"
+
+[node name="D" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 92.0435
+margin_top = 51.5564
+margin_right = 129.043
+margin_bottom = 99.5564
+text = "D"
+
+[node name="F" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 127.043
+margin_top = 51.5564
+margin_right = 164.043
+margin_bottom = 99.5564
+text = "F"
+
+[node name="G" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 162.043
+margin_top = 51.5564
+margin_right = 199.043
+margin_bottom = 99.5564
+text = "G"
+
+[node name="H" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 197.043
+margin_top = 51.5564
+margin_right = 234.043
+margin_bottom = 99.5564
+text = "H"
+
+[node name="J" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 232.043
+margin_top = 51.5564
+margin_right = 269.043
+margin_bottom = 99.5564
+text = "J"
+
+[node name="K" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 267.043
+margin_top = 51.5564
+margin_right = 304.043
+margin_bottom = 99.5564
+text = "K"
+
+[node name="L" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 302.043
+margin_top = 51.5564
+margin_right = 339.043
+margin_bottom = 99.5564
+text = "L"
+
+[node name="X" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 82.4719
+margin_top = 98.2782
+margin_right = 119.472
+margin_bottom = 146.278
+text = "X"
+
+[node name="C" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 117.472
+margin_top = 98.2782
+margin_right = 154.472
+margin_bottom = 146.278
+text = "C"
+
+[node name="V" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 152.472
+margin_top = 98.2782
+margin_right = 189.472
+margin_bottom = 146.278
+text = "V"
+
+[node name="B" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 187.472
+margin_top = 98.2782
+margin_right = 224.472
+margin_bottom = 146.278
+text = "B"
+
+[node name="N" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 221.472
+margin_top = 98.2782
+margin_right = 258.472
+margin_bottom = 146.278
+text = "N"
+
+[node name="M" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 256.472
+margin_top = 98.2782
+margin_right = 293.472
+margin_bottom = 146.278
+text = "M"
+
+[node name="Backspace" parent="Alfabeto" instance=ExtResource( 16 )]
+margin_left = 291.0
+margin_top = 98.0
+margin_right = 357.0
+margin_bottom = 146.0
+icon = ExtResource( 13 )
+
+[node name="Geral" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" parent="Geral" instance=ExtResource( 16 )]
+margin_left = 2.97836
+margin_top = 137.715
+margin_right = 48.9784
+margin_bottom = 185.715
+icon = ExtResource( 4 )
+
+[node name="Up" parent="Geral" instance=ExtResource( 16 )]
+margin_left = 47.0
+margin_top = 138.0
+margin_right = 93.0
+margin_bottom = 163.0
+custom_fonts/font = SubResource( 1 )
+icon = ExtResource( 8 )
+
+[node name="Down" parent="Geral" instance=ExtResource( 16 )]
+margin_left = 47.0
+margin_top = 161.0
+margin_right = 93.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 2 )
+icon = ExtResource( 3 )
+
+[node name="Right" parent="Geral" instance=ExtResource( 16 )]
+margin_left = 90.7809
+margin_top = 137.837
+margin_right = 136.781
+margin_bottom = 185.837
+icon = ExtResource( 2 )
+
+[node name="Space" parent="Geral" instance=ExtResource( 16 )]
+margin_left = 135.0
+margin_top = 138.0
+margin_right = 249.0
+margin_bottom = 186.0
+
+[node name="Select" parent="Geral" instance=ExtResource( 16 )]
+margin_left = 247.172
+margin_top = 137.837
+margin_right = 293.172
+margin_bottom = 185.837
+toggle_mode = true
+icon = ExtResource( 1 )
+
+[node name="Enter" parent="Geral" instance=ExtResource( 16 )]
+margin_left = 291.0
+margin_top = 138.0
+margin_right = 357.0
+margin_bottom = 186.0
+icon = ExtResource( 14 )
+[connection signal="pressed" from="Principal/Shift" to="." method="_on_Shift_pressed"]
+[connection signal="pressed" from="Principal/Undo" to="." method="_on_Action_pressed" binds= [ "undo" ]]
+[connection signal="pressed" from="Principal/Redo" to="." method="_on_Action_pressed" binds= [ "redo" ]]
+[connection signal="pressed" from="Principal/Cut" to="." method="_on_Action_pressed" binds= [ "cut" ]]
+[connection signal="pressed" from="Principal/Paste" to="." method="_on_Action_pressed" binds= [ "paste" ]]
+[connection signal="pressed" from="Principal/Copy" to="." method="_on_Action_pressed" binds= [ "copy" ]]
+[connection signal="pressed" from="Principal/Backspace" to="." method="_on_Backspace_pressed"]
+[connection signal="pressed" from="Principal/Input" to="." method="_on_Char_pressed" binds= [ "\"" ]]
+[connection signal="pressed" from="Principal/MoveLeft" to="." method="_on_Char_pressed" binds= [ "<" ]]
+[connection signal="pressed" from="Principal/Output" to="." method="_on_Char_pressed" binds= [ "'" ]]
+[connection signal="pressed" from="Principal/MoveRight" to="." method="_on_Char_pressed" binds= [ ">" ]]
+[connection signal="pressed" from="Principal/IfZero" to="." method="_on_Char_pressed" binds= [ "!" ]]
+[connection signal="pressed" from="Principal/CopyTo" to="." method="_on_Char_pressed" binds= [ "." ]]
+[connection signal="pressed" from="Principal/IfNegative" to="." method="_on_Char_pressed" binds= [ "?" ]]
+[connection signal="pressed" from="Principal/CopyFrom" to="." method="_on_Char_pressed" binds= [ ":" ]]
+[connection signal="pressed" from="Principal/LoopBegin" to="." method="_on_Char_pressed" binds= [ "[" ]]
+[connection signal="pressed" from="Principal/Add" to="." method="_on_Char_pressed" binds= [ "+" ]]
+[connection signal="pressed" from="Principal/LoopEnd" to="." method="_on_Char_pressed" binds= [ "]" ]]
+[connection signal="pressed" from="Principal/Sub" to="." method="_on_Char_pressed" binds= [ "-" ]]
+[connection signal="pressed" from="Principal/Swap" to="." method="_on_Char_pressed" binds= [ "@" ]]
+[connection signal="pressed" from="Principal/Increments" to="." method="_on_Char_pressed" binds= [ "/" ]]
+[connection signal="pressed" from="Principal/Decrements" to="." method="_on_Char_pressed" binds= [ "\\" ]]
+[connection signal="pressed" from="Alfabeto/Shift" to="." method="_on_Shift_pressed"]
+[connection signal="pressed" from="Alfabeto/Z" to="." method="_on_Char_pressed" binds= [ "z" ]]
+[connection signal="pressed" from="Alfabeto/A" to="." method="_on_Char_pressed" binds= [ "a" ]]
+[connection signal="pressed" from="Alfabeto/Q" to="." method="_on_Char_pressed" binds= [ "q" ]]
+[connection signal="pressed" from="Alfabeto/W" to="." method="_on_Char_pressed" binds= [ "w" ]]
+[connection signal="pressed" from="Alfabeto/E" to="." method="_on_Char_pressed" binds= [ "e" ]]
+[connection signal="pressed" from="Alfabeto/R" to="." method="_on_Char_pressed" binds= [ "r" ]]
+[connection signal="pressed" from="Alfabeto/T" to="." method="_on_Char_pressed" binds= [ "t" ]]
+[connection signal="pressed" from="Alfabeto/Y" to="." method="_on_Char_pressed" binds= [ "y" ]]
+[connection signal="pressed" from="Alfabeto/U" to="." method="_on_Char_pressed" binds= [ "u" ]]
+[connection signal="pressed" from="Alfabeto/I" to="." method="_on_Char_pressed" binds= [ "i" ]]
+[connection signal="pressed" from="Alfabeto/O" to="." method="_on_Char_pressed" binds= [ "o" ]]
+[connection signal="pressed" from="Alfabeto/P" to="." method="_on_Char_pressed" binds= [ "p" ]]
+[connection signal="pressed" from="Alfabeto/S" to="." method="_on_Char_pressed" binds= [ "s" ]]
+[connection signal="pressed" from="Alfabeto/D" to="." method="_on_Char_pressed" binds= [ "d" ]]
+[connection signal="pressed" from="Alfabeto/F" to="." method="_on_Char_pressed" binds= [ "f" ]]
+[connection signal="pressed" from="Alfabeto/G" to="." method="_on_Char_pressed" binds= [ "g" ]]
+[connection signal="pressed" from="Alfabeto/H" to="." method="_on_Char_pressed" binds= [ "h" ]]
+[connection signal="pressed" from="Alfabeto/J" to="." method="_on_Char_pressed" binds= [ "j" ]]
+[connection signal="pressed" from="Alfabeto/K" to="." method="_on_Char_pressed" binds= [ "k" ]]
+[connection signal="pressed" from="Alfabeto/L" to="." method="_on_Char_pressed" binds= [ "l" ]]
+[connection signal="pressed" from="Alfabeto/X" to="." method="_on_Char_pressed" binds= [ "x" ]]
+[connection signal="pressed" from="Alfabeto/C" to="." method="_on_Char_pressed" binds= [ "c" ]]
+[connection signal="pressed" from="Alfabeto/V" to="." method="_on_Char_pressed" binds= [ "v" ]]
+[connection signal="pressed" from="Alfabeto/B" to="." method="_on_Char_pressed" binds= [ "b" ]]
+[connection signal="pressed" from="Alfabeto/N" to="." method="_on_Char_pressed" binds= [ "n" ]]
+[connection signal="pressed" from="Alfabeto/M" to="." method="_on_Char_pressed" binds= [ "m" ]]
+[connection signal="pressed" from="Alfabeto/Backspace" to="." method="_on_Backspace_pressed"]
+[connection signal="pressed" from="Geral/Left" to="." method="_on_Arrow_pressed" binds= [ "left" ]]
+[connection signal="pressed" from="Geral/Up" to="." method="_on_Arrow_pressed" binds= [ "up" ]]
+[connection signal="pressed" from="Geral/Down" to="." method="_on_Arrow_pressed" binds= [ "down" ]]
+[connection signal="pressed" from="Geral/Right" to="." method="_on_Arrow_pressed" binds= [ "right" ]]
+[connection signal="pressed" from="Geral/Space" to="." method="_on_Char_pressed" binds= [ " " ]]
+[connection signal="pressed" from="Geral/Select" to="." method="_on_Select_pressed"]
+[connection signal="pressed" from="Geral/Enter" to="." method="_on_Char_pressed" binds= [ "*" ]]
