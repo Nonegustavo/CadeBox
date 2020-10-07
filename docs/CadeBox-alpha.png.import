@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/favicon.png-1417c6a592d2b427fc7454f761995e77.stex"
+path="res://.import/CadeBox-alpha.png-841ec03425bf5b9658687b1ae615fb04.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HTML5/favicon.png"
-dest_files=[ "res://.import/favicon.png-1417c6a592d2b427fc7454f761995e77.stex" ]
+source_file="res://docs/CadeBox-alpha.png"
+dest_files=[ "res://.import/CadeBox-alpha.png-841ec03425bf5b9658687b1ae615fb04.stex" ]
 
 [params]
 
