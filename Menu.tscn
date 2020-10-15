@@ -26,7 +26,7 @@ VScrollBar/styles/grabber_pressed = null
 VScrollBar/styles/scroll = SubResource( 3 )
 VScrollBar/styles/scroll_focus = null
 
-[sub_resource type="StyleBoxTexture" id=14]
+[sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 10, 12 )
 margin_left = 4.0
@@ -34,7 +34,7 @@ margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 6.0
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 10, 12 )
 margin_left = 4.0
@@ -42,9 +42,9 @@ margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 6.0
 
-[sub_resource type="StyleBoxEmpty" id=13]
+[sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="StyleBoxTexture" id=10]
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 10, 12 )
 margin_left = 4.0
@@ -52,14 +52,14 @@ margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 6.0
 
-[sub_resource type="DynamicFontData" id=11]
+[sub_resource type="DynamicFontData" id=9]
 font_path = "res://fonts/monogram_extended.ttf"
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=10]
 size = 32
-font_data = SubResource( 11 )
+font_data = SubResource( 9 )
 
-[sub_resource type="StyleBoxTexture" id=16]
+[sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 10, 12 )
 margin_left = 4.0
@@ -67,7 +67,7 @@ margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 6.0
 
-[sub_resource type="StyleBoxTexture" id=15]
+[sub_resource type="StyleBoxTexture" id=12]
 texture = ExtResource( 4 )
 region_rect = Rect2( 10, 0, 10, 12 )
 margin_left = 4.0
@@ -75,7 +75,7 @@ margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 6.0
 
-[sub_resource type="StyleBoxTexture" id=5]
+[sub_resource type="StyleBoxTexture" id=13]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 10, 12 )
 margin_left = 4.0
@@ -83,30 +83,30 @@ margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 6.0
 
-[sub_resource type="DynamicFontData" id=6]
+[sub_resource type="DynamicFontData" id=14]
 font_path = "res://fonts/monogram_extended.ttf"
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=15]
 size = 64
-font_data = SubResource( 6 )
+font_data = SubResource( 14 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 10, 12 )
+margin_left = 4.0
+margin_right = 4.0
+margin_top = 4.0
+margin_bottom = 6.0
 
 [sub_resource type="StyleBoxTexture" id=17]
 texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 10, 12 )
+region_rect = Rect2( 10, 0, 10, 12 )
 margin_left = 4.0
 margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 6.0
 
 [sub_resource type="StyleBoxTexture" id=18]
-texture = ExtResource( 1 )
-region_rect = Rect2( 10, 0, 10, 12 )
-margin_left = 4.0
-margin_right = 4.0
-margin_top = 4.0
-margin_bottom = 6.0
-
-[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 1 )
 region_rect = Rect2( 0, 0, 10, 12 )
 margin_left = 4.0
@@ -178,11 +178,11 @@ margin_left = -98.0
 margin_top = -58.0
 margin_right = 99.0
 margin_bottom = -11.0
-custom_styles/hover = SubResource( 14 )
-custom_styles/pressed = SubResource( 9 )
-custom_styles/focus = SubResource( 13 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 12 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -230,10 +230,10 @@ margin_bottom = 158.0
 margin_right = 276.0
 margin_bottom = 62.0
 focus_mode = 0
-custom_styles/hover = SubResource( 16 )
-custom_styles/pressed = SubResource( 15 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -246,10 +246,10 @@ margin_top = 66.0
 margin_right = 276.0
 margin_bottom = 128.0
 focus_mode = 0
-custom_styles/hover = SubResource( 17 )
-custom_styles/pressed = SubResource( 18 )
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -261,10 +261,10 @@ visible = false
 margin_top = 66.0
 margin_right = 276.0
 margin_bottom = 128.0
-custom_styles/hover = SubResource( 17 )
-custom_styles/pressed = SubResource( 18 )
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )

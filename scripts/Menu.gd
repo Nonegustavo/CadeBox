@@ -55,6 +55,7 @@ func _ready():
 		if i < Main.actual_level + 2:
 			yield(get_tree(), "idle_frame")
 			new_button.grab_focus()
+			new_button.focus_mode = Control.FOCUS_NONE
 		pass
 
 func _on_Level_pressed(level):
