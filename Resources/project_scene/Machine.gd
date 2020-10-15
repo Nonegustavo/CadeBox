@@ -9,7 +9,7 @@ var tape = []
 signal output(value)
 
 func _ready():
-	for _i in range(32):
+	for _i in range(Main.level.cells):
 		var b = box.instance()
 		$HBox/Tape/List.add_child(b)
 		tape.append(b)
@@ -24,9 +24,13 @@ func reset():
 	for v in tape:
 		v.num = 0
 
+func init(data):
+	for i in range(0, data.size()):
+		tape[i].num = data[i]
+
 func move_left():
 	if pointer == 0:
-		register.text = "0"
+		register.num = 0
 	else:
 		tape[pointer].get_node("Pointer").hide()
 		pointer -= 1
@@ -36,7 +40,7 @@ func move_left():
 
 func move_right():
 	if pointer == tape.size()-1:
-		register.text = "0"
+		register.num = 0
 	else:
 		tape[pointer].get_node("Pointer").hide()
 		pointer += 1

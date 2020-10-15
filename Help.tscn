@@ -1,0 +1,163 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://images/help-popup.png" type="Texture" id=1]
+[ext_resource path="res://images/paper-next.png" type="Texture" id=2]
+[ext_resource path="res://images/paper-back.png" type="Texture" id=3]
+[ext_resource path="res://images/paper-close.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Help.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxTexture" id=1]
+content_margin_left = 14.0
+content_margin_right = 14.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 12, 18 )
+margin_left = 4.0
+margin_right = 6.0
+margin_top = 4.0
+margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://fonts/monogram_extended.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://fonts/monogram_extended.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://fonts/monogram_extended.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+font_data = SubResource( 6 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 360.0
+margin_bottom = 640.0
+rect_min_size = Vector2( 360, 640 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0, 0, 0, 0.572549 )
+
+[node name="Manual" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="PanelContainer" parent="Manual"]
+margin_left = 5.0
+margin_top = 70.0
+margin_right = 355.0
+margin_bottom = 570.0
+rect_min_size = Vector2( 350, 500 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Manual/Panel"]
+margin_left = 14.0
+margin_top = 4.0
+margin_right = 336.0
+margin_bottom = 490.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="Header" type="HBoxContainer" parent="Manual/Panel/VBox"]
+margin_right = 322.0
+margin_bottom = 42.0
+
+[node name="Title" type="Label" parent="Manual/Panel/VBox/Header"]
+margin_top = 8.0
+margin_right = 270.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.721569, 0.721569, 0.721569, 1 )
+text = "CadeBox - Manual"
+
+[node name="Close" type="Button" parent="Manual/Panel/VBox/Header"]
+margin_left = 274.0
+margin_right = 322.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 32, 32 )
+focus_mode = 0
+icon = ExtResource( 4 )
+flat = true
+
+[node name="Body" type="RichTextLabel" parent="Manual/Panel/VBox"]
+margin_top = 62.0
+margin_right = 322.0
+margin_bottom = 394.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 5 )
+custom_colors/default_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][img=200]res://images/cadebox-logo-mini.png[/img][/center]
+
+Parabéns por adquirir oaa seu CadeBox! Você nunca mais precisará carregar um pesado computador para onde você for. Todas as facilidades de um computador agora em seu bolso!
+"
+text = "
+
+Parabéns por adquirir oaa seu CadeBox! Você nunca mais precisará carregar um pesado computador para onde você for. Todas as facilidades de um computador agora em seu bolso!
+"
+scroll_active = false
+
+[node name="Footer" type="HBoxContainer" parent="Manual/Panel/VBox"]
+margin_top = 414.0
+margin_right = 322.0
+margin_bottom = 486.0
+size_flags_horizontal = 3
+
+[node name="Left" type="Button" parent="Manual/Panel/VBox/Footer"]
+margin_right = 72.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 72, 72 )
+focus_mode = 0
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+
+[node name="Pagina" type="Label" parent="Manual/Panel/VBox/Footer"]
+margin_left = 76.0
+margin_top = 23.0
+margin_right = 246.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.717647, 0.717647, 0.717647, 1 )
+text = "1/25"
+align = 1
+
+[node name="Right" type="Button" parent="Manual/Panel/VBox/Footer"]
+margin_left = 250.0
+margin_right = 322.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 72, 72 )
+focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+[connection signal="pressed" from="Manual/Panel/VBox/Header/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="Manual/Panel/VBox/Footer/Left" to="." method="_on_Left_pressed"]
+[connection signal="pressed" from="Manual/Panel/VBox/Footer/Right" to="." method="_on_Right_pressed"]

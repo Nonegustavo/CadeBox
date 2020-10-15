@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Resources/keyboard_button/select.png" type="Texture" id=1]
 [ext_resource path="res://Resources/keyboard_button/arrow_right.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Resources/keyboard_button/arrow_left.png" type="Texture" id=4]
 [ext_resource path="res://Resources/project_scene/Teclado/Teclado.gd" type="Script" id=5]
 [ext_resource path="res://Resources/keyboard_button/shift.png" type="Texture" id=6]
+[ext_resource path="res://Resources/keyboard_button/redo.png" type="Texture" id=7]
 [ext_resource path="res://Resources/keyboard_button/arrow_up.png" type="Texture" id=8]
 [ext_resource path="res://Resources/keyboard_button/copy.png" type="Texture" id=9]
 [ext_resource path="res://Resources/keyboard_button/backspace1.png" type="Texture" id=10]
@@ -13,6 +14,7 @@
 [ext_resource path="res://Resources/keyboard_button/paste.png" type="Texture" id=12]
 [ext_resource path="res://Resources/keyboard_button/backspace2.png" type="Texture" id=13]
 [ext_resource path="res://Resources/keyboard_button/enter2.png" type="Texture" id=14]
+[ext_resource path="res://Resources/keyboard_button/undo.png" type="Texture" id=15]
 [ext_resource path="res://Resources/keyboard_button/Button.tscn" type="PackedScene" id=16]
 
 [sub_resource type="DynamicFont" id=1]
@@ -48,14 +50,16 @@ margin_left = 47.0
 margin_top = 98.0
 margin_right = 93.0
 margin_bottom = 146.0
-focus_mode = 2
+enabled_focus_mode = 0
+icon = ExtResource( 15 )
 
 [node name="Redo" parent="Principal" instance=ExtResource( 16 )]
 margin_left = 91.0
 margin_top = 98.0
 margin_right = 137.0
 margin_bottom = 146.0
-focus_mode = 2
+enabled_focus_mode = 0
+icon = ExtResource( 7 )
 
 [node name="Cut" parent="Principal" instance=ExtResource( 16 )]
 margin_left = 179.467
@@ -86,11 +90,11 @@ margin_bottom = 146.0
 icon = ExtResource( 10 )
 
 [node name="Input" parent="Principal" instance=ExtResource( 16 )]
-margin_left = 25.9387
+margin_left = 2.9387
 margin_top = 52.4217
-margin_right = 71.9387
+margin_right = 48.9387
 margin_bottom = 100.422
-text = "\""
+text = "~"
 
 [node name="MoveLeft" parent="Principal" instance=ExtResource( 16 )]
 margin_left = 2.93867
@@ -100,11 +104,11 @@ margin_bottom = 54.4217
 text = "<"
 
 [node name="Output" parent="Principal" instance=ExtResource( 16 )]
-margin_left = 69.9387
+margin_left = 46.9387
 margin_top = 52.4217
-margin_right = 115.939
+margin_right = 92.939
 margin_bottom = 100.422
-text = "'"
+text = "^"
 
 [node name="MoveRight" parent="Principal" instance=ExtResource( 16 )]
 margin_left = 46.9387
@@ -114,9 +118,9 @@ margin_bottom = 54.4217
 text = ">"
 
 [node name="IfZero" parent="Principal" instance=ExtResource( 16 )]
-margin_left = 113.939
+margin_left = 178.939
 margin_top = 52.4217
-margin_right = 159.939
+margin_right = 224.939
 margin_bottom = 100.422
 text = "!"
 
@@ -128,9 +132,9 @@ margin_bottom = 54.4217
 text = "."
 
 [node name="IfNegative" parent="Principal" instance=ExtResource( 16 )]
-margin_left = 157.939
+margin_left = 222.939
 margin_top = 52.4217
-margin_right = 203.939
+margin_right = 268.939
 margin_bottom = 100.422
 text = "?"
 
@@ -142,9 +146,9 @@ margin_bottom = 53.8605
 text = ":"
 
 [node name="LoopBegin" parent="Principal" instance=ExtResource( 16 )]
-margin_left = 201.939
+margin_left = 90.939
 margin_top = 52.4217
-margin_right = 247.939
+margin_right = 136.939
 margin_bottom = 100.422
 text = "["
 
@@ -156,9 +160,9 @@ margin_bottom = 54.4217
 text = "+"
 
 [node name="LoopEnd" parent="Principal" instance=ExtResource( 16 )]
-margin_left = 245.939
+margin_left = 134.939
 margin_top = 52.4217
-margin_right = 291.939
+margin_right = 180.939
 margin_bottom = 100.422
 text = "]"
 
@@ -170,11 +174,19 @@ margin_bottom = 54.4217
 text = "-"
 
 [node name="Swap" parent="Principal" instance=ExtResource( 16 )]
-margin_left = 289.939
+margin_left = 266.939
 margin_top = 52.4217
-margin_right = 335.939
+margin_right = 312.939
 margin_bottom = 100.422
 text = "@"
+
+[node name="Again" parent="Principal" instance=ExtResource( 16 )]
+margin_left = 310.939
+margin_top = 52.4217
+margin_right = 356.939
+margin_bottom = 100.422
+focus_mode = 2
+text = "#"
 
 [node name="Increments" parent="Principal" instance=ExtResource( 16 )]
 margin_left = 266.939
@@ -457,9 +469,9 @@ icon = ExtResource( 14 )
 [connection signal="pressed" from="Principal/Paste" to="." method="_on_Action_pressed" binds= [ "paste" ]]
 [connection signal="pressed" from="Principal/Copy" to="." method="_on_Action_pressed" binds= [ "copy" ]]
 [connection signal="pressed" from="Principal/Backspace" to="." method="_on_Backspace_pressed"]
-[connection signal="pressed" from="Principal/Input" to="." method="_on_Char_pressed" binds= [ "\"" ]]
+[connection signal="pressed" from="Principal/Input" to="." method="_on_Char_pressed" binds= [ "~" ]]
 [connection signal="pressed" from="Principal/MoveLeft" to="." method="_on_Char_pressed" binds= [ "<" ]]
-[connection signal="pressed" from="Principal/Output" to="." method="_on_Char_pressed" binds= [ "'" ]]
+[connection signal="pressed" from="Principal/Output" to="." method="_on_Char_pressed" binds= [ "^" ]]
 [connection signal="pressed" from="Principal/MoveRight" to="." method="_on_Char_pressed" binds= [ ">" ]]
 [connection signal="pressed" from="Principal/IfZero" to="." method="_on_Char_pressed" binds= [ "!" ]]
 [connection signal="pressed" from="Principal/CopyTo" to="." method="_on_Char_pressed" binds= [ "." ]]
@@ -470,6 +482,7 @@ icon = ExtResource( 14 )
 [connection signal="pressed" from="Principal/LoopEnd" to="." method="_on_Char_pressed" binds= [ "]" ]]
 [connection signal="pressed" from="Principal/Sub" to="." method="_on_Char_pressed" binds= [ "-" ]]
 [connection signal="pressed" from="Principal/Swap" to="." method="_on_Char_pressed" binds= [ "@" ]]
+[connection signal="pressed" from="Principal/Again" to="." method="_on_Char_pressed" binds= [ "#" ]]
 [connection signal="pressed" from="Principal/Increments" to="." method="_on_Char_pressed" binds= [ "/" ]]
 [connection signal="pressed" from="Principal/Decrements" to="." method="_on_Char_pressed" binds= [ "\\" ]]
 [connection signal="pressed" from="Alfabeto/Shift" to="." method="_on_Shift_pressed"]

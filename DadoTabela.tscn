@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://images/var.png" type="Texture" id=1]
+[ext_resource path="res://scripts/DadoTabela.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 1 )
@@ -25,10 +26,10 @@ focus_mode = 2
 size_flags_horizontal = 3
 custom_styles/normal = SubResource( 1 )
 custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.533333, 0.533333, 0.533333, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-text = "0"
 align = 1
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

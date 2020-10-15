@@ -1,7 +1,10 @@
 extends Label
 
-var focus = false
+func black():
+	add_color_override("font_color", Color("000000"))
 
-func _ready():
-	if focus:
-		grab_focus()
+func grey():
+	add_color_override("font_color", Color("888888"))
+
+func red():
+	add_color_override("font_color", Color("dd0000"))

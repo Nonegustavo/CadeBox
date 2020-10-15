@@ -4,18 +4,18 @@
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 10, 12 )
+region_rect = Rect2( 10, 0, 10, 12 )
 margin_left = 4.0
 margin_right = 4.0
 margin_top = 4.0
 margin_bottom = 6.0
-modulate_color = Color( 1, 1, 1, 0.498039 )
+modulate_color = Color( 1, 1, 1, 0.666667 )
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 2 )
-region_rect = Rect2( 20, 0, 10, 12 )
+region_rect = Rect2( 10, 0, 10, 12 )
 margin_left = 4.0
 margin_right = 4.0
 margin_top = 4.0
@@ -64,10 +64,10 @@ margin_bottom = 19.4417
 focus_mode = 0
 theme = SubResource( 6 )
 custom_fonts/font = SubResource( 8 )
-custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_disabled = Color( 0.568627, 0.329412, 0, 0.160784 )
 custom_colors/font_color = Color( 0.568627, 0.329412, 0, 1 )
 custom_colors/font_color_hover = Color( 0.568627, 0.329412, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 0.890196, 0.701961, 1 )
+custom_colors/font_color_pressed = Color( 0.568627, 0.329412, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -8,6 +8,37 @@ signal select_pressed(s)
 signal backspace_pressed()
 signal action_pressed(s)
 
+func _ready():
+	for v in Main.level.forbidden_cmd:
+		match v:
+			">":
+				$Principal/MoveRight.disabled = true
+			"<":
+				$Principal/MoveLeft.disabled = true
+			".":
+				$Principal/CopyTo.disabled = true
+			":":
+				$Principal/CopyFrom.disabled = true
+			"+":
+				$Principal/Add.disabled = true
+			"-":
+				$Principal/Sub.disabled = true
+			"/":
+				$Principal/Increments.disabled = true
+			"\\":
+				$Principal/Decrements.disabled = true
+			"[":
+				$Principal/LoopBegin.disabled = true
+			"]":
+				$Principal/LoopEnd.disabled = true
+			"!":
+				$Principal/IfZero.disabled = true
+			"?":
+				$Principal/IfNegative.disabled = true
+			"@":
+				$Principal/Swap.disabled = true
+			"#":
+				$Principal/Again.disabled = true
 
 func _on_Shift_pressed() -> void:
 	$Principal.visible = not $Principal.visible
