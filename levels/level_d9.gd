@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#D9 - ESTOURO DE MEMÓRIA"
-const task = "Leia duas listas terminadas em -1, processe-as como dois números, some-os e retorne cada um dos dígitos do resultado."
+const task = "Leia duas listas terminadas em -1, processe-as como dois números, some-os e retorne cada um dos dígitos do resultado.\n\nExemplo, se forem lidos 2, 1, -1, 1, 0, 1, -1, você deve retornar 1, 2, 2. \n\nInfelizmente os números são muito maiores do que esse exemplo."
 const mode = "level"
+const challenge = true
 const cells = 30
 const max_instructions = INF
 const forbidden_cmd = []

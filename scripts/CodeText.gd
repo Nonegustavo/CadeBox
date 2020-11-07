@@ -19,9 +19,11 @@ func save_code():
 	undo()
 	redo()
 	Main.code[Main.actualCode] = text
+	Main.save_code()
 
 
 func _on_Teclado_action_pressed(action):
+	$"../../../Sound".play_sound("Keyboard")
 	match action:
 		"copy":
 			if is_selection_active():
@@ -54,6 +56,7 @@ func _on_Teclado_arrow_pressed(dir):
 	# uma mesma linha pode ocupar varias linhas visualmente
 	# neste caso o cursor deve mudar de coluna
 	# eh sensivel ao max de caracteres por linha
+	$"../../../Sound".play_sound("Keyboard")
 	var line = cursor_get_line()
 	var column  = cursor_get_column()
 	var lineStr = get_line(line)
@@ -101,6 +104,7 @@ func _on_Teclado_arrow_pressed(dir):
 
 
 func _on_Teclado_backspace_pressed():
+	$"../../../Sound".play_sound("Keyboard")
 	# eh preciso lidar diretamente com o texto cru
 	# tambem eh preciso saber onde o cursor esta em relaçao ao texto
 	var text_selected = ""
@@ -155,6 +159,8 @@ func _on_Teclado_backspace_pressed():
 
 
 func _on_Teclado_char_typed(key):
+	$"../../../Sound".play_sound("Keyboard")
+	$"../../../Sound".play_sound(key)
 	insert_text_at_cursor(key)
 	save_code()
 	emit_signal("deselect_text")
@@ -162,6 +168,7 @@ func _on_Teclado_char_typed(key):
 
 func _on_Teclado_select_pressed(pressed):
 	if pressed:
+		$"../../../Sound".play_sound("Keyboard")
 		select_mode = true
 		selected_line = cursor_get_line()
 		selected_column = cursor_get_column()

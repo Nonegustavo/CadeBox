@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#13 - SOBREVIVÊNCIA DO MAIOR"
-const task = "A cada dois numeros lidos, retorne qual é o maior."
+const task = "Para cada dois numeros lidos, retorne qual deles é o maior."
 const mode = "level"
+const challenge = false
 const cells = 4
 const max_instructions = INF
 const forbidden_cmd = []

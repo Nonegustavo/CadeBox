@@ -185,7 +185,6 @@ margin_left = 310.939
 margin_top = 52.4217
 margin_right = 356.939
 margin_bottom = 100.422
-focus_mode = 2
 text = "#"
 
 [node name="Increments" parent="Principal" instance=ExtResource( 16 )]

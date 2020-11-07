@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#7 - INICIAR LANÇAMENTO"
-const task = "Para cada número lido, retorne ele e todos os números anteriores a ele até chegar a 0, como em uma contagem regressiva."
+const task = "Para cada número lido, retorne ele e todos os números anteriores a ele até chegar a 0, como em uma contagem regressiva.\n\nVocê precisará dos novos comandos [color=black][[/color] e [color=black]][/color]."
 const mode = "level"
+const challenge = false
 const cells = 4
 const max_instructions = INF
 const forbidden_cmd = ["?", "!"]

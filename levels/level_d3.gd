@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#D3 - EMPILHANDO E DESEMPILHANDO"
-const task = "Se um número lido for diferente de zero, armazene-o em uma lista. Se for zero, retorne o último elemento armazenado e apague-o da lista."
+const task = "Se um número lido for diferente de zero, armazene-o em uma lista. Se for zero, retorne o elemento do final da lista e apague-o."
 const mode = "level"
+const challenge = true
 const cells = 20
 const max_instructions = INF
 const forbidden_cmd = []

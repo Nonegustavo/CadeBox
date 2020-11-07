@@ -3,6 +3,7 @@ extends Node
 const title = "#16 - CONTANDO O REBANHO"
 const task = "Para cada número lido, retorne quantas ocorrências dele existem na fita."
 const mode = "level"
+const challenge = false
 const cells = 20
 const max_instructions = INF
 const forbidden_cmd = []

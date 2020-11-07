@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#10 - ACESSO VIP"
-const task = "Leia todos os números e retorne apenas os números positivos."
+const task = "Leia todos os números e retorne apenas os números positivos.\n\nAgora você tem acesso aos comandos [color=black]![/color] e [color=black]?[/color]. Veja no manual o que eles fazem!"
 const mode = "level"
+const challenge = false
 const cells = 4
 const max_instructions = INF
 const forbidden_cmd = []

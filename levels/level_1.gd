@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#1 - MAS SÃO TANTOS!"
-const task = "Pegue TODOS os números da entrada e coloque-os na saída."
+const task = "Pegue TODOS os números da entrada e coloque-os na saída.\n\nAgora você tem o comando [color=black]#[/color] para te ajudar. Veja no manual o que ele faz!"
 const mode = "level"
+const challenge = false
 const cells = 4
 const max_instructions = INF
 const forbidden_cmd = ["<",">",".",":","@","+","-","/","\\", "[", "]", "?", "!"]

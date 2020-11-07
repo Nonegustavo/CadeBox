@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#18 - NÚMERO.ZIP"
-const task = "Para cada lista terminada em -1 e retorne-a em um único número."
+const task = "Para cada lista terminada em -1, retorne-a como um único número. Por exemplo, se for [3, 2, 2, -1], retorne 322.\n\nO velho conhecido 0 foi trocado para -1 por motivos de: não conseguiríamos ler um número com dígito 0."
 const mode = "level"
+const challenge = false
 const cells = 2
 const max_instructions = INF
 const forbidden_cmd = []

@@ -1,10 +1,11 @@
 extends Node
 
 const title = "#D0 - MÁXIMA POTÊNCIA"
-const task = "Para cada número, retorne ele vezes 50."
+const task = "Para cada número, retorne ele vezes 50. Utilize até 16 comandos.\n\nEstes desafios de cor laranja são opcionais."
 const mode = "level"
+const challenge = true
 const cells = 1
-const max_instructions = INF
+const max_instructions = 16
 const forbidden_cmd = ["[", "]", "?", "!"]
 
 var rng = RandomNumberGenerator.new()

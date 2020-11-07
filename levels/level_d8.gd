@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#D8 - REUNIÃO DE FAMÍLIA"
-const task = "Leia os números e retorne apenas os números primos."
+const task = "Leia os números e retorne apenas os números primos.\n\nUm número primo é divisível apenas por ele mesmo e por 1."
 const mode = "level"
+const challenge = true
 const cells = 20
 const max_instructions = INF
 const forbidden_cmd = []

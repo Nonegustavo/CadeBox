@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://images/help-popup.png" type="Texture" id=1]
 [ext_resource path="res://images/paper-next.png" type="Texture" id=2]
 [ext_resource path="res://images/paper-back.png" type="Texture" id=3]
 [ext_resource path="res://images/paper-close.png" type="Texture" id=4]
 [ext_resource path="res://scripts/Help.gd" type="Script" id=5]
+[ext_resource path="res://Sound.tscn" type="PackedScene" id=6]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 14.0
@@ -30,6 +31,7 @@ font_path = "res://fonts/monogram_extended.ttf"
 
 [sub_resource type="DynamicFont" id=5]
 size = 32
+extra_spacing_bottom = -5
 font_data = SubResource( 4 )
 
 [sub_resource type="DynamicFontData" id=6]
@@ -64,10 +66,10 @@ __meta__ = {
 
 [node name="Panel" type="PanelContainer" parent="Manual"]
 margin_left = 5.0
-margin_top = 70.0
+margin_top = 60.0
 margin_right = 355.0
-margin_bottom = 570.0
-rect_min_size = Vector2( 350, 500 )
+margin_bottom = 580.0
+rect_min_size = Vector2( 350, 520 )
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -77,7 +79,7 @@ __meta__ = {
 margin_left = 14.0
 margin_top = 4.0
 margin_right = 336.0
-margin_bottom = 490.0
+margin_bottom = 510.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 20
@@ -107,7 +109,7 @@ flat = true
 [node name="Body" type="RichTextLabel" parent="Manual/Panel/VBox"]
 margin_top = 62.0
 margin_right = 322.0
-margin_bottom = 394.0
+margin_bottom = 414.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/normal_font = SubResource( 5 )
@@ -117,6 +119,7 @@ bbcode_text = "[center][img=200]res://images/cadebox-logo-mini.png[/img][/center
 
 Parabéns por adquirir oaa seu CadeBox! Você nunca mais precisará carregar um pesado computador para onde você for. Todas as facilidades de um computador agora em seu bolso!
 "
+meta_underlined = false
 text = "
 
 Parabéns por adquirir oaa seu CadeBox! Você nunca mais precisará carregar um pesado computador para onde você for. Todas as facilidades de um computador agora em seu bolso!
@@ -124,9 +127,9 @@ Parabéns por adquirir oaa seu CadeBox! Você nunca mais precisará carregar um 
 scroll_active = false
 
 [node name="Footer" type="HBoxContainer" parent="Manual/Panel/VBox"]
-margin_top = 414.0
+margin_top = 434.0
 margin_right = 322.0
-margin_bottom = 486.0
+margin_bottom = 506.0
 size_flags_horizontal = 3
 
 [node name="Left" type="Button" parent="Manual/Panel/VBox/Footer"]
@@ -158,6 +161,9 @@ focus_mode = 0
 icon = ExtResource( 2 )
 flat = true
 expand_icon = true
+
+[node name="Sound" parent="." instance=ExtResource( 6 )]
 [connection signal="pressed" from="Manual/Panel/VBox/Header/Close" to="." method="_on_Close_pressed"]
+[connection signal="meta_clicked" from="Manual/Panel/VBox/Body" to="." method="_on_Body_meta_clicked"]
 [connection signal="pressed" from="Manual/Panel/VBox/Footer/Left" to="." method="_on_Left_pressed"]
 [connection signal="pressed" from="Manual/Panel/VBox/Footer/Right" to="." method="_on_Right_pressed"]

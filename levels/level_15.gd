@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#15 - VAMOS DIVIDIR!"
-const task = "Para cada dois números, divida o primeiro pelo segundo e retorne o resultado."
+const task = "Para cada dois números, divida o primeiro pelo segundo e retorne o resultado.\n\nPor conveniência, temos apenas divisões exatas, sem restos."
 const mode = "level"
+const challenge = false
 const cells = 6
 const max_instructions = INF
 const forbidden_cmd = []

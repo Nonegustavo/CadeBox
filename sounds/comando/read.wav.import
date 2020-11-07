@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/read.wav-c1ab3aa3bbf71834f95a04b1e8c3395b.sample"
+
+[deps]
+
+source_file="res://sounds/comando/read.wav"
+dest_files=[ "res://.import/read.wav-c1ab3aa3bbf71834f95a04b1e8c3395b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/write.wav-3742a2de3b2e9c1ee0d3b20a9c1f8fb6.sample"
+
+[deps]
+
+source_file="res://sounds/comando/write.wav"
+dest_files=[ "res://.import/write.wav-3742a2de3b2e9c1ee0d3b20a9c1f8fb6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

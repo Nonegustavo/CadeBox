@@ -5,59 +5,108 @@ var mode:String = "level" # sandbox | level
 var normal_speed:float = 0.25
 var fast_speed:float = 0.05
 var actualCode:int = 0
-var level:Node = preload("res://levels/level_8.gd").new()
+var level
+var save_path = "user://save_game.dat"
 var actual_level:int = -1
-var data:Dictionary = {
-	help = false,
-	levels = [
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-		{success=false, commands=0, executed=0},
-	]
-}
+var data
 
-func internal_test(code:String):
+func _ready():
+	var f = File.new()
+	if not f.file_exists(save_path):
+		data = new_data()
+		save_data()
+	else:
+		load_data()
+
+func new_data():
+	var d:Dictionary = {
+		help = false,
+		sound = true,
+		levels = [
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+			{success=false, commands=INF, executed=INF},
+		]
+	}
+	return d
+
+func new_code():
+	var c = ["", "", ""]
+	return c
+
+func save_data():
+	var f = File.new()
+	f.open(save_path, File.WRITE)
+	f.store_var(data)
+	f.close()
+
+func save_code(number = actual_level, code_data = code):
+	var f = File.new()
+	f.open("user://level_%d.dat" % number, File.WRITE)
+	f.store_var(code_data)
+	f.close()
+
+func load_data():
+	var f = File.new()
+	f.open(save_path, File.READ)
+	data = f.get_var()
+
+func load_code(number):
+	var f = File.new()
+	if f.file_exists("user://level_%d.dat" % number):
+		f.open("user://level_%d.dat" % number, File.READ)
+		code = f.get_var()
+	else:
+		code = new_code()
+
+func reset_data():
+	data = new_data()
+	save_data()
+	for i in range(30):
+		save_code(i, new_code())
+
+func internal_test(code:String, limit:int):
 	var tests = []
 	var total_commands = 0
 	for _i in range(250):
 		var test = level.generate_test()
-		make_test(code, test)
+		make_test(code, test, limit*10)
 		tests.append(test)
 		total_commands += test.executed
 		if test.error:
 			return [false, test]
 	return [true, total_commands/250]
 
-func make_test(code:String, test:Dictionary):
+func make_test(code:String, test:Dictionary, limit:int):
 	test.executed = 0
 	test.error = 0
 	var register:int = 0
@@ -142,4 +191,7 @@ func make_test(code:String, test:Dictionary):
 				stack.clear()
 		code_pointer += 1
 		test.executed += 1
-	test.error = output_pointer < test.output.size()
+		if test.executed > limit:
+			code_pointer = code.length()
+			test.error = true
+	test.error = test.error or output_pointer < test.output.size()

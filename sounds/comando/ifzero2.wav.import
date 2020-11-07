@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ifzero2.wav-a23782458270d00d45543861b6ae9e6d.sample"
+
+[deps]
+
+source_file="res://sounds/comando/ifzero2.wav"
+dest_files=[ "res://.import/ifzero2.wav-a23782458270d00d45543861b6ae9e6d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

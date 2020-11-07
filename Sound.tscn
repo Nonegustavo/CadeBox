@@ -1,0 +1,99 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://sounds/comando/ifnegative.wav" type="AudioStream" id=1]
+[ext_resource path="res://sounds/comando/add.wav" type="AudioStream" id=2]
+[ext_resource path="res://sounds/comando/right.wav" type="AudioStream" id=3]
+[ext_resource path="res://sounds/comando/up.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/erro.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/comando/loop.wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/comando/swap.wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/comando/write2.wav" type="AudioStream" id=9]
+[ext_resource path="res://sounds/comando/copy2.wav" type="AudioStream" id=10]
+[ext_resource path="res://sounds/comando/ifzero2.wav" type="AudioStream" id=11]
+[ext_resource path="res://sounds/victory.wav" type="AudioStream" id=12]
+[ext_resource path="res://Sound.gd" type="Script" id=13]
+[ext_resource path="res://sounds/comando/sub.wav" type="AudioStream" id=14]
+[ext_resource path="res://sounds/switch-page.wav" type="AudioStream" id=15]
+[ext_resource path="res://sounds/comando/down.wav" type="AudioStream" id=16]
+[ext_resource path="res://sounds/papel.wav" type="AudioStream" id=17]
+[ext_resource path="res://sounds/comando/print.wav" type="AudioStream" id=18]
+[ext_resource path="res://sounds/comando/left.wav" type="AudioStream" id=19]
+[ext_resource path="res://sounds/comando/again.wav" type="AudioStream" id=20]
+[ext_resource path="res://sounds/play.wav" type="AudioStream" id=21]
+[ext_resource path="res://sounds/on.wav" type="AudioStream" id=22]
+[ext_resource path="res://sounds/teclado.ogg" type="AudioStream" id=23]
+[ext_resource path="res://sounds/teclado-numerico.wav" type="AudioStream" id=24]
+
+[node name="Sound" type="Node"]
+script = ExtResource( 13 )
+
+[node name="Tab" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+
+[node name="Error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+
+[node name="Manual" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="Page" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="Numeric" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="Keyboard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+volume_db = -15.0
+
+[node name="Left" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+
+[node name="Right" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Add" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Sub" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="Up" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Down" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
+[node name="Copy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="Write" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Swap" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Read" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+pitch_scale = 1.1
+
+[node name="Print" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+
+[node name="Loop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Again" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+
+[node name="Ifzero" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="Ifnegative" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

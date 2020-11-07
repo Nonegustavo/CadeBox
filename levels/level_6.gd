@@ -3,6 +3,7 @@ extends Node
 const title = "#6 - POTENCIALIZADOR"
 const task = "Para cada número lido, retorne o dobro dele."
 const mode = "level"
+const challenge = false
 const cells = 2
 const max_instructions = INF
 const forbidden_cmd = []

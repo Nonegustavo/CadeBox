@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#17 - SEM REPETIR"
-const task = "Retorne todos os números lidos, com exceção dos números que já foram retornados antes."
+const task = "Retorne todos os números lidos, com exceção dos números que já foram lidos antes.\n\nRetorne todos os números lidos, com exceção dos números que já foram lidos antes. Espere, eu já disse isso..."
 const mode = "level"
+const challenge = false
 const cells = 30
 const max_instructions = INF
 const forbidden_cmd = []

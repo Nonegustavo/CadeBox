@@ -1,11 +1,12 @@
 extends Node
 
 const title = "#2 - COM LICENÇA"
-const task = "A cada dois numeros lidos, retorne-os em ordem inversa."
+const task = "Leia dois números da entrada e retorne-os ao contrário para a saída. Repida até acabar os números da entrada.\n\nAgora você tem os comandos [color=black].[/color], [color=black]:[/color] e [color=black]@[/color]. Veja no manual o que eles fazem!"
 const mode = "level"
+const challenge = false
 const cells = 4
 const max_instructions = INF
-const forbidden_cmd = ["+","-","/","\\", "[", "]", "?", "!"]
+const forbidden_cmd = ["<",">","+","-","/","\\", "[", "]", "?", "!"]
 
 var rng = RandomNumberGenerator.new()
 

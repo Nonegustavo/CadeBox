@@ -3,6 +3,7 @@ extends Node
 const title = "#D2 - POSITIVIDADE ABSOLUTA"
 const task = "Leia todos os números e retorne-os. Mas retire o sinal dos números negativos."
 const mode = "level"
+const challenge = true
 const cells = 1
 const max_instructions = INF
 const forbidden_cmd = []

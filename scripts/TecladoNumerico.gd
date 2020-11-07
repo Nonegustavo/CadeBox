@@ -29,22 +29,26 @@ func _on_Num_pressed(arg):
 	if num <= -100 or num >= 100:
 		return
 	num = num * 10 + arg
+	$Sound.play_sound("Numeric")
 	updateLabel()
 
 
 func _on_Neg_pressed():
 	negative = not negative
+	$Sound.play_sound("Numeric")
 	updateLabel()
 
 
 func _on_Clear_pressed():
 	num = 0
 	negative = false
+	$Sound.play_sound("Numeric")
 	updateLabel()
 
 
 func _on_Backspace_pressed():
 	num = num/10
+	$Sound.play_sound("Numeric")
 	updateLabel()
 
 
@@ -53,6 +57,7 @@ func _on_Enter_pressed():
 	emit_signal("newEntry", neg*num)
 	num = 0
 	negative = false
+	$Sound.play_sound("Numeric")
 	disable_keyboard(true)
 
 

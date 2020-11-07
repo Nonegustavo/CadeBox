@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Resources/keyboard_button/Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/var.png" type="Texture" id=2]
 [ext_resource path="res://scripts/TecladoNumerico.gd" type="Script" id=3]
+[ext_resource path="res://Sound.tscn" type="PackedScene" id=4]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
@@ -156,6 +157,8 @@ custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "AGUARDANDO"
 align = 1
+
+[node name="Sound" parent="." instance=ExtResource( 4 )]
 [connection signal="pressed" from="Sete" to="." method="_on_Num_pressed" binds= [ 7 ]]
 [connection signal="pressed" from="Oito" to="." method="_on_Num_pressed" binds= [ 8 ]]
 [connection signal="pressed" from="Nove" to="." method="_on_Num_pressed" binds= [ 9 ]]

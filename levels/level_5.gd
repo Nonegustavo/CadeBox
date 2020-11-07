@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#5 - ALÔ, VIZINHOS!"
-const task = "Para cada número lido da entrada, retorne o número anterior e o número seguinte a ele."
+const task = "Para cada número lido da entrada, retorne o número anterior e o número seguinte a ele. Use os novos comandos [color=black]/[/color] e [color=black]\\[/color]."
 const mode = "level"
+const challenge = false
 const cells = 4
 const max_instructions = INF
 const forbidden_cmd = ["[", "]", "?", "!"]

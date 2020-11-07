@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#14 - O PRODUTO FINAL"
-const task = "A cada dois numeros lidos, multiplique um pelo outro e coloque o resultado na saida."
+const task = "A cada dois numeros lidos, multiplique um pelo outro e coloque o resultado na saida. Não se preocupe com valores negativos."
 const mode = "level"
+const challenge = false
 const cells = 8
 const max_instructions = INF
 const forbidden_cmd = []

@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#D4 - AGULHA NO PALHEIRO"
-const task = "Para cada lista terminada em zero, retorne qual é o menor número."
+const task = "Para cada lista terminada em zero, retorne qual é o menor número da lista."
 const mode = "level"
+const challenge = true
 const cells = 3
 const max_instructions = INF
 const forbidden_cmd = []

@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#D7 - PODE SOLETRAR?"
-const task = "Para cada número lido, retorne cada um de seus dígitos."
+const task = "Para cada número lido, retorne cada um de seus dígitos. Exemplo: se for lido 456, retorne 4, 5 e 6, nesta ordem."
 const mode = "level"
+const challenge = true
 const cells = 5
 const max_instructions = INF
 const forbidden_cmd = []

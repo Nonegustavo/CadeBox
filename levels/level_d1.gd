@@ -1,8 +1,9 @@
 extends Node
 
 const title = "#D1 - DENTRO DA CAIXA"
-const task = "Para cada dois números lidos, retorne todos os números entre eles."
+const task = "Para cada dois números lidos, retorne todos os números entre eles.\n\nExemplo: se forem lidos 2 e 6, retorne 3, 4, 5."
 const mode = "level"
+const challenge = true
 const cells = 5
 const max_instructions = INF
 const forbidden_cmd = ["?", "!"]

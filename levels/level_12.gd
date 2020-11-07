@@ -3,6 +3,7 @@ extends Node
 const title = "#12 - DE TRÁS PARA FRENTE"
 const task = "Para cada lista terminada em zero, retorne todos os elementos em ordem inversa."
 const mode = "level"
+const challenge = false
 const cells = 20
 const max_instructions = INF
 const forbidden_cmd = []

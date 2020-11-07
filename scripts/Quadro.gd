@@ -1,4 +1,6 @@
 extends RichTextLabel
 
 func _ready():
-	text = Main.level.title + "\n\n" + Main.level.task
+	bbcode_text = Main.level.task
+	if Main.level.challenge:
+		get_parent().modulate = Color("#ff8080")

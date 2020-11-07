@@ -3,6 +3,7 @@ extends Node
 const title = "#9 ZERO AQUI NÃO"
 const task = "Retorne todos os números lidos para a saída, com exceção dos zeros."
 const mode = "level"
+const challenge = false
 const cells = 4
 const max_instructions = INF
 const forbidden_cmd = ["?", "!"]
